@@ -26,16 +26,13 @@ La App no dispone de servidor: no carga, transmite ni sincroniza estos contenido
 
 ## 3. Acceso a la red, exportación y uso compartido
 
-Las funciones principales de la App funcionan completamente sin conexión, y sus entradas guardadas nunca se transmiten por la red. Para determinar si la red está disponible (por ejemplo, para mostrar un aviso cuando no hay conexión y actualizar la lista al recuperarla), la App:
+La App no realiza ninguna solicitud de red ni utiliza ningún servidor. No contiene código de red y la app compilada tampoco se enlaza con los frameworks de red de Apple, por lo que sus entradas nunca se suben, transmiten ni sincronizan en ningún sitio.
 
-- lee, mediante el framework Network de Apple, el tipo de conexión actual (Wi-Fi o datos móviles) y si esa conexión se factura por volumen o está en modo de bajo consumo de datos. Esta información se usa solo en su dispositivo y no se carga a ningún servidor.
-- envía una única solicitud HTTPS GET a `https://captive.apple.com/hotspot-detect.html`, una dirección operada por Apple, y considera el éxito o el fallo como señal de accesibilidad. La solicitud utiliza una sesión efímera, no lleva cookies, no escribe caché y no contiene ninguna de sus entradas ni el texto que haya introducido en la App. Como ocurre con cualquier solicitud HTTPS, Apple, en calidad de operador de esa dirección, puede ver la dirección IP de origen y la información de red habitual necesaria para establecer la conexión; nosotros no recibimos ni almacenamos esa información.
+Todas las funciones se pueden usar sin conexión a la red, incluida la entrada de voz: el habla se reconoce en su dispositivo y el texto reconocido se escribe únicamente en el archivo de datos local. La disponibilidad de la entrada de voz depende de que el sistema tenga recursos de dictado para su idioma y de que el dictado del sistema esté activado; si falta cualquiera de las dos cosas, la entrada de voz se desactiva y la App muestra un aviso de que el reconocimiento de voz en el dispositivo no está disponible en ese momento y le sugiere revisar los ajustes de dictado del sistema o usar el teclado. Puede seguir escribiendo con el teclado, y la App nunca cambia a un método de reconocimiento que necesite conexión a la red.
 
-Aparte de esta comprobación de conectividad, la App no envía datos al exterior por iniciativa propia.
+La versión actual no ofrece funciones de exportación ni de uso compartido, y no entrega contenido a otras apps mediante la hoja de compartir de iOS. Si una versión futura las añade, lo explicaremos antes de usarlas y actualizaremos esta política.
 
-La versión actual no ofrece ninguna función de exportación o uso compartido de entradas y tampoco entrega contenido a otras aplicaciones mediante el panel de compartir de iOS. Si una versión futura incorpora esa función, la explicaremos antes de su uso y actualizaremos esta política.
-
-Que una copia de seguridad del dispositivo iOS (copia de iCloud o del ordenador) incluya los archivos de entradas del espacio de almacenamiento de la App depende de su configuración de copia de seguridad del sistema. Esa copia la realiza una función del sistema de Apple y es ajena a la App.
+Que una copia de seguridad del dispositivo iOS (copia de iCloud o del ordenador) incluya los archivos de registro del sandbox de la App depende de los ajustes de copia de seguridad de su sistema. Esa copia la realiza una función del sistema de Apple y no está relacionada con la App.
 
 ## 4. Permisos del sistema y acceso al dispositivo
 
@@ -45,10 +42,8 @@ La entrada de voz es la única función que necesita un permiso. La primera vez 
 
 - Para qué se usa: la App convierte lo que usted dice en el texto de una entrada, que puede editar antes de guardarla. El texto reconocido se escribe únicamente en el archivo de datos local de la App (cards.json); no se crea nada más.
 - Cuándo se solicita: solo la primera vez que utiliza la entrada de voz. La App no activa el micrófono al iniciarse ni en segundo plano, y la grabación se detiene en cuanto termina el dictado, sale del editor o cierra la App.
-- El audio no se guarda ni se envía: la App no crea ningún archivo de audio ni conserva grabaciones. La entrada de voz utiliza el reconocimiento de voz del propio dispositivo, por lo que el audio se procesa solo en su dispositivo: no se envía a servidores de Apple ni a nosotros, y el texto reconocido permanece en el archivo de datos local de su dispositivo. Si su dispositivo o su idioma no admiten el reconocimiento en el dispositivo, la App le indicará que la entrada de voz no está disponible o pasará a la entrada por teclado; nunca recurre a un servicio en la nube.
+- El audio no se guarda ni se envía: la App no crea ningún archivo de audio ni conserva grabaciones. La entrada de voz utiliza el reconocimiento de voz del propio dispositivo, por lo que el audio se procesa solo en su dispositivo: no se envía a servidores de Apple ni a nosotros, y el texto reconocido permanece en el archivo de datos local de su dispositivo. Para ello se necesitan recursos de dictado para su idioma en el sistema y que el dictado del sistema esté activado; si no es así, la entrada de voz se desactiva y la App muestra un aviso de que el reconocimiento de voz en el dispositivo no está disponible en ese momento y le sugiere revisar los ajustes de dictado del sistema o usar el teclado. Nunca recurre a un método de reconocimiento que necesite conexión a la red.
 - Si no concede el permiso: el resto de funciones sigue disponible y podrá seguir añadiendo y editando entradas con el teclado. Puede conceder el permiso más adelante en los Ajustes de iOS o revocarlo en cualquier momento; en tal caso la entrada de voz dejará de funcionar.
-
-Es posible que vea en los Ajustes de iOS un interruptor de «Datos móviles» para la App; se trata de un control general del sistema para las aplicaciones que usan la red, no de una solicitud de autorización de la App. Si lo desactiva, la App seguirá funcionando, pero puede que su comprobación del estado de la red deje de funcionar.
 
 Si una versión futura incorpora alguna función que necesite otro permiso, mostraremos la solicitud estándar de iOS antes del primer uso, explicaremos para qué sirve y actualizaremos esta política en esta misma página. Puede revocar en cualquier momento los permisos concedidos desde los Ajustes de iOS; en tal caso, la función correspondiente podría dejar de estar disponible.
 
@@ -75,6 +70,4 @@ Cuando modifiquemos esta política, actualizaremos la fecha de «Última actuali
 
 Si tiene preguntas sobre esta política o desea ejercer algún derecho en relación con sus datos, puede contactarnos en:
 
-- Desarrollador: <开发者主体名称 / Developer Name>
 - Correo electrónico de contacto: yufei.cjn@outlook.com
-- Dirección postal: <通信地址 / Mailing Address> (elimine esta línea si no es obligatoria en su jurisdicción)

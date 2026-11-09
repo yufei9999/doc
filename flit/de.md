@@ -26,16 +26,13 @@ Die App verfügt über keinen Server. Sie lädt diese Inhalte nicht hoch, übert
 
 ## 3. Netzwerkzugriff, Export und Teilen
 
-Die Kernfunktionen der App arbeiten vollständig offline, und Ihre gespeicherten Einträge werden nie über das Netzwerk übertragen. Um festzustellen, ob das Netzwerk verfügbar ist (etwa um offline einen Hinweis anzuzeigen und die Liste nach Wiederherstellung der Verbindung zu aktualisieren), führt die App Folgendes aus:
+Die App führt keine Netzwerkanfragen aus und nutzt keinen Server. Sie enthält keinen Netzwerkcode, und die erstellte App bindet auch keine Netzwerk-Frameworks von Apple ein; Ihre Einträge werden daher nicht hochgeladen, übertragen oder synchronisiert.
 
-- Über Apples Network-Framework liest sie den aktuellen Verbindungstyp (WLAN oder Mobilfunk) sowie aus, ob die Verbindung volumenabhängig abgerechnet wird oder sich im Low-Data-Modus befindet. Diese Informationen werden nur auf Ihrem Gerät verwendet und nicht hochgeladen.
-- Sie sendet eine HTTPS-GET-Anfrage an die von Apple betriebene Adresse `https://captive.apple.com/hotspot-detect.html` und wertet Erfolg oder Fehlschlag als Erreichbarkeitssignal. Die Anfrage verwendet eine temporäre (ephemerale) Sitzung, enthält keine Cookies, schreibt keinen Cache und enthält weder Ihre Einträge noch Texte, die Sie in der App eingegeben haben. Wie bei jeder HTTPS-Anfrage kann Apple als Betreiber dieser Adresse die Quell-IP-Adresse und die für den Verbindungsaufbau erforderlichen üblichen Netzwerkinformationen sehen; wir erhalten und speichern diese Informationen nicht.
+Alle Funktionen sind ohne Netzwerkverbindung nutzbar, auch die Sprachaufnahme: Die Sprache wird auf Ihrem Gerät erkannt, und der erkannte Text wird ausschließlich in die lokale Datendatei geschrieben. Ob die Sprachaufnahme verfügbar ist, hängt davon ab, ob das System Diktatressourcen für Ihre Sprache bereitstellt und ob das Systemdiktat aktiviert ist. Fehlt eine der beiden Voraussetzungen, wird die Sprachaufnahme deaktiviert und die App meldet: „Die Spracherkennung auf dem Gerät ist derzeit nicht verfügbar. Bitte prüfen Sie die Diktateinstellungen des Systems oder verwenden Sie die Tastatur.“ Sie können dann weiterhin über die Tastatur eingeben; die App wechselt nie zu einer Erkennung, die eine Netzwerkverbindung benötigt.
 
-Außer dieser Verbindungsprüfung sendet die App von sich aus keine Daten nach außen.
+Die aktuelle Version bietet keine Export- oder Freigabefunktion und übergibt keine Inhalte über das iOS-Teilen-Menü an andere Apps. Sollte eine künftige Version eine solche Funktion einführen, erläutern wir sie vor der Nutzung und aktualisieren diese Erklärung.
 
-Die aktuelle Version bietet keine Funktion zum Exportieren oder Teilen von Einträgen und übergibt Inhalte auch nicht über das iOS-Systemfreigabemenü an andere Apps. Sollte eine künftige Version eine solche Funktion einführen, erläutern wir sie vor der Nutzung und aktualisieren diese Erklärung.
-
-Ob eine iOS-Gerätesicherung (iCloud- oder Computersicherung) die Eintragsdateien in der Sandbox der App enthält, hängt von Ihren System-Sicherungseinstellungen ab. Diese Sicherung wird von einer Systemfunktion von Apple ausgeführt und steht in keinem Zusammenhang mit der App.
+Ob eine iOS-Gerätesicherung (iCloud- oder Computersicherung) die Eintragsdateien im Sandbox-Bereich der App enthält, hängt von Ihren Systemeinstellungen für die Sicherung ab. Diese Sicherung erfolgt durch eine Systemfunktion von Apple und steht in keinem Zusammenhang mit der App.
 
 ## 4. Systemberechtigungen und Gerätezugriff
 
@@ -45,10 +42,8 @@ Die Sprachaufnahme ist die einzige Funktion, die eine Berechtigung benötigt. We
 
 - Zweck: Die App wandelt das Gesprochene in den Text eines Eintrags um, den Sie vor dem Speichern bearbeiten können. Der erkannte Text wird ausschließlich in die lokale Datendatei der App (cards.json) geschrieben; darüber hinaus entsteht nichts.
 - Zeitpunkt der Abfrage: nur beim ersten Verwenden der Sprachaufnahme. Die App schaltet das Mikrofon weder beim Start noch im Hintergrund ein, und die Aufnahme endet, sobald Sie das Diktieren beenden, den Editor verlassen oder die App schließen.
-- Keine Speicherung und keine Übertragung der Aufnahme: Die App erzeugt keine Audiodatei und behält keine Aufnahme. Die Sprachaufnahme nutzt die Spracherkennung direkt auf dem Gerät. Die Aufnahme wird daher ausschließlich auf Ihrem Gerät verarbeitet und weder an Server von Apple noch an uns übermittelt; auch der erkannte Text bleibt in der lokalen Datendatei auf Ihrem Gerät. Wenn Ihr Gerät oder Ihre Sprache die Erkennung auf dem Gerät nicht unterstützt, weist die App darauf hin, dass die Sprachaufnahme nicht verfügbar ist, oder weicht auf die Tastatureingabe aus. Auf einen Cloud-Dienst wird nie umgeschaltet.
+- Keine Speicherung und keine Übertragung der Aufnahme: Die App erzeugt keine Audiodatei und behält keine Aufnahme. Die Sprachaufnahme nutzt die Spracherkennung direkt auf dem Gerät. Die Aufnahme wird daher ausschließlich auf Ihrem Gerät verarbeitet und weder an Server von Apple noch an uns übermittelt; auch der erkannte Text bleibt in der lokalen Datendatei auf Ihrem Gerät. Voraussetzung sind Diktatressourcen für Ihre Sprache im System und ein aktiviertes Systemdiktat. Fehlen sie, wird die Sprachaufnahme deaktiviert und die App meldet: „Die Spracherkennung auf dem Gerät ist derzeit nicht verfügbar. Bitte prüfen Sie die Diktateinstellungen des Systems oder verwenden Sie die Tastatur.“ Auf eine Erkennung, die eine Netzwerkverbindung benötigt, wird nie zurückgegriffen.
 - Wenn Sie die Berechtigung ablehnen: Alle anderen Funktionen bleiben verfügbar, und Sie können Einträge wie gewohnt über die Tastatur hinzufügen und bearbeiten. Sie können die Berechtigung später in den iOS-Einstellungen erteilen oder jederzeit widerrufen; die Sprachaufnahme ist danach nicht mehr verfügbar.
-
-In den iOS-Einstellungen kann für die App ein Schalter für „Mobile Daten“ erscheinen; dies ist eine systemweite Steuerung für Apps mit Netzwerkzugriff und keine von der App ausgelöste Berechtigungsanfrage. Wenn Sie ihn deaktivieren, funktioniert die App weiterhin, die Prüfung des Netzwerkstatus funktioniert jedoch möglicherweise nicht mehr.
 
 Sollte eine künftige Version eine Funktion einführen, die eine weitere Berechtigung erfordert, zeigen wir vor der ersten Nutzung die standardmäßige iOS-Abfrage an, erläutern deren Zweck und aktualisieren diese Erklärung auf dieser Seite. Erteilte Berechtigungen können Sie jederzeit in den iOS-Einstellungen widerrufen; die betroffene Funktion steht danach gegebenenfalls nicht mehr zur Verfügung.
 
@@ -75,6 +70,4 @@ Bei Änderungen aktualisieren wir das Datum „Zuletzt aktualisiert“ am Anfang
 
 Bei Fragen zu dieser Erklärung oder zur Ausübung von Rechten bezüglich Ihrer Daten erreichen Sie uns unter:
 
-- Entwickler: <开发者主体名称 / Developer Name>
 - Kontakt-E-Mail: yufei.cjn@outlook.com
-- Postanschrift: <通信地址 / Mailing Address> (diese Zeile streichen, falls in Ihrer Jurisdiktion nicht erforderlich)

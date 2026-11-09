@@ -26,12 +26,9 @@ The App has no server. It does not upload, transmit or sync this content to any 
 
 ## 3. Network access, export and sharing
 
-The App's core features work fully offline, and your saved records are never transmitted over the network. To determine whether the network is available (for example, to show a notice when offline and to refresh the list when connectivity returns), the App:
+The App makes no network requests and uses no server. It contains no networking code, and the built app does not link against Apple's networking frameworks, so your records are never uploaded, transmitted or synced anywhere.
 
-- reads the current link type (Wi-Fi or cellular) and whether that link is metered or in Low Data Mode through Apple's Network framework. This information is used only on your device and is not uploaded.
-- sends one HTTPS GET request to `https://captive.apple.com/hotspot-detect.html`, an address operated by Apple, and treats success or failure as a reachability signal. The request uses an ephemeral session, carries no cookies, writes no cache, and contains none of your records or anything you typed in the App. As with any HTTPS request, Apple, as the operator of that address, can see the source IP address and the ordinary network information needed to establish the connection; we neither receive nor store that information.
-
-Apart from this connectivity check, the App does not send any data out on its own.
+All features work without a network connection, including voice input: speech is recognised on your device, and the recognised text is written only to the local data file. Voice input depends on the system having dictation resources for your language and on system dictation being enabled; if either is missing, voice input is turned off and the App shows a notice that on-device speech recognition is currently unavailable and suggests checking the system dictation settings or using the keyboard. You can then keep typing, and the App never switches to a recognition method that needs a network connection.
 
 The current version has no export or share feature and does not pass content to other apps through the iOS share sheet. If a future version adds one, we will explain it before use and update this policy.
 
@@ -45,10 +42,8 @@ Voice input is the only feature that needs permission. The first time you tap th
 
 - What it is for: the App turns what you say into the text of a record, which you can edit before saving. The recognised text is written only to the App's local data file (cards.json); nothing else is created.
 - When it is requested: only the first time you use voice input. The App does not open the microphone at launch or in the background, and recording stops as soon as you finish dictating, leave the editor or close the App.
-- Audio is neither stored nor sent: the App creates no audio file and keeps no recording. Voice input uses the system's on-device speech recognition, so the audio is processed on your device only — it is not uploaded to Apple's servers or to us, and the recognised text stays in the local data file on your device. If your device or language does not support on-device recognition, the App tells you that voice input is unavailable or falls back to keyboard input; it never switches to a cloud service.
+- Audio is neither stored nor sent: the App creates no audio file and keeps no recording. Voice input uses the system's on-device speech recognition, so the audio is processed on your device only — it is not uploaded to Apple's servers or to us, and the recognised text stays in the local data file on your device. This requires dictation resources for your language to be present and system dictation to be enabled; if they are not, voice input is turned off and the App shows a notice that on-device speech recognition is currently unavailable and suggests checking the system dictation settings or using the keyboard. It never falls back to a recognition method that needs a network connection.
 - If you decline: every other feature remains available, and you can keep adding and editing records by typing. You can allow the permission later in iOS Settings, or revoke it at any time; voice input will then stop working.
-
-You may see a "Wireless Data" switch for the App in iOS Settings; that is a system-wide control for apps that use the network, not an authorisation request from the App. If you turn it off, the App still works, but its network status check may stop working.
 
 If a future version introduces a feature that needs another authorisation, we will show the standard iOS request before that feature is first used, explain its purpose, and update this policy on this page. You can revoke any permission at any time in iOS Settings; the related feature may then be unavailable.
 
@@ -75,6 +70,4 @@ When this policy changes, we will update the "Last updated" date at the top of t
 
 If you have questions about this policy, or wish to exercise any rights relating to your data, please contact us:
 
-- Developer: <开发者主体名称 / Developer Name>
 - Contact email: yufei.cjn@outlook.com
-- Mailing address: <通信地址 / Mailing Address> (delete this line if not required in your jurisdiction)
