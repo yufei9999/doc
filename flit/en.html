@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0">
+<title>Privacy Policy for Flit</title>
+<meta name="description" content="Privacy Policy for Flit">
+<style>
+  :root {
+    --accent: #00704A;
+    --accent-dark: #00553A;
+    --bg: #F6F5F1;
+    --card: #FFFFFF;
+    --text: #24262B;
+    --muted: #8C8F96;
+    --border: #ECEBE6;
+    --code-bg: #EFEEE9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    padding: 2rem 1rem 4rem;
+    text-align: start;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 2.25rem; }
+  h1 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+  }
+  header .meta {
+    color: var(--muted);
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .lead {
+    margin: 0 0 1.5rem;
+    font-size: 0.98rem;
+    color: var(--text);
+  }
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.1rem;
+    text-align: start;
+  }
+  h2 {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+    margin-bottom: 0.7rem;
+    line-height: 1.45;
+  }
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 1.1rem 0 0.5rem;
+    line-height: 1.4;
+  }
+  p { margin: 0.55rem 0; }
+  p:first-of-type { margin-top: 0; }
+  ul { padding-inline-start: 1.25rem; margin: 0.55rem 0; }
+  li { margin-bottom: 0.35rem; }
+  li:last-child { margin-bottom: 0; }
+  strong { font-weight: 700; }
+  code {
+    background: var(--code-bg);
+    border-radius: 5px;
+    padding: 0.1em 0.35em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.88em;
+    direction: ltr;
+    unicode-bidi: embed;
+    word-break: break-all;
+  }
+  .ltr { direction: ltr; unicode-bidi: embed; }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin-top: 2rem;
+    line-height: 1.7;
+  }
+  @media (max-width: 480px) {
+    body { padding: 1.5rem 0.85rem 3rem; }
+    section { padding: 1.2rem 1.1rem; border-radius: 14px; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.05rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Privacy Policy for Flit</h1>
+  <p class="meta">Effective date: November 6, 2026<br>Last updated: November 6, 2026</p>
+</header>
+<p class="lead">Flit ("the App") is a local note-taking app. You write down an item as it occurs to you, then add follow-up notes later, so that each item builds into a timeline of its own. This policy describes what the App actually does with information, and how that information is kept. Please read it before you start using the App.</p>
+<section>
+  <h2>1. What the App stores</h2>
+  <p>Anything you type or dictate into the App is saved on your device, including:</p>
+<ul><li>the title and body of each record (the body is also used to generate the list summary);</li><li>follow-up notes you add to a record, together with their timestamps;</li><li>each record's status flag and whether it is pinned;</li><li>the creation and modification times of records and follow-up notes.</li></ul>
+<p>The App also keeps one local backup copy of the previous data, used to recover if the main data file is corrupted (see section 2).</p>
+<p>The App does not collect your device model, OS version, device identifiers (IDFV or IDFA), location, contacts, photos, camera, health data or payment information, and it does not log your usage behaviour or navigation paths. Voice input produces no audio file and keeps no recording: only the recognised text is saved, as part of the record.</p>
+</section>
+<section>
+  <h2>2. Where your information is stored</h2>
+  <p>Records are kept as a JSON file inside the App's own sandbox (Application Support/Flit), alongside a <code>.bak</code> backup copy. When saving, the App writes a temporary file and then replaces the main file atomically, to reduce the risk of corruption if a write is interrupted; if the main file cannot be read, the App tries to restore from the backup.</p>
+<p>The App has no server. It does not upload, transmit or sync this content to any cloud service or third party. We cannot view, read or restore your records.</p>
+</section>
+<section>
+  <h2>3. Network access, export and sharing</h2>
+  <p>The App's core features work fully offline, and your saved records are never transmitted over the network. To determine whether the network is available (for example, to show a notice when offline and to refresh the list when connectivity returns), the App:</p>
+<ul><li>reads the current link type (Wi-Fi or cellular) and whether that link is metered or in Low Data Mode through Apple's Network framework. This information is used only on your device and is not uploaded.</li><li>sends one HTTPS GET request to <code>https://captive.apple.com/hotspot-detect.html</code>, an address operated by Apple, and treats success or failure as a reachability signal. The request uses an ephemeral session, carries no cookies, writes no cache, and contains none of your records or anything you typed in the App. As with any HTTPS request, Apple, as the operator of that address, can see the source IP address and the ordinary network information needed to establish the connection; we neither receive nor store that information.</li></ul>
+<p>Apart from this connectivity check, the App does not send any data out on its own.</p>
+<p>The current version has no export or share feature and does not pass content to other apps through the iOS share sheet. If a future version adds one, we will explain it before use and update this policy.</p>
+<p>Whether an iOS device backup (iCloud or computer backup) includes the record files in the App's sandbox depends on your system backup settings. That backup is carried out by an Apple system feature and is unrelated to the App.</p>
+</section>
+<section>
+  <h2>4. System permissions and device access</h2>
+  <p>Voice input is the only feature that needs permission. The first time you tap the voice input button, iOS asks whether the App may use the microphone; depending on the system API the App uses, iOS may also show a speech recognition authorisation request at that point. The App does not request notifications, photo library, camera, location, contacts or health data, and does not access them.</p>
+<h3>Microphone and voice input</h3>
+<ul><li>What it is for: the App turns what you say into the text of a record, which you can edit before saving. The recognised text is written only to the App's local data file (cards.json); nothing else is created.</li><li>When it is requested: only the first time you use voice input. The App does not open the microphone at launch or in the background, and recording stops as soon as you finish dictating, leave the editor or close the App.</li><li>Audio is neither stored nor sent: the App creates no audio file and keeps no recording. Voice input uses the system's on-device speech recognition, so the audio is processed on your device only — it is not uploaded to Apple's servers or to us, and the recognised text stays in the local data file on your device. If your device or language does not support on-device recognition, the App tells you that voice input is unavailable or falls back to keyboard input; it never switches to a cloud service.</li><li>If you decline: every other feature remains available, and you can keep adding and editing records by typing. You can allow the permission later in iOS Settings, or revoke it at any time; voice input will then stop working.</li></ul>
+<p>You may see a "Wireless Data" switch for the App in iOS Settings; that is a system-wide control for apps that use the network, not an authorisation request from the App. If you turn it off, the App still works, but its network status check may stop working.</p>
+<p>If a future version introduces a feature that needs another authorisation, we will show the standard iOS request before that feature is first used, explain its purpose, and update this policy on this page. You can revoke any permission at any time in iOS Settings; the related feature may then be unavailable.</p>
+</section>
+<section>
+  <h2>5. Retention and deletion</h2>
+  <ul><li>Records remain on your device until you delete them.</li><li>You can delete a whole record in the App, or delete an individual follow-up note within a record.</li><li>Deleting the App from your iPhone also deletes the main data file and the backup file in the App's sandbox.</li><li>Deletion cannot be undone. Because the data exists only on your device and the App has no export feature, we cannot restore it for you; please delete with care.</li></ul>
+</section>
+<section>
+  <h2>6. Third-party SDKs, analytics and advertising</h2>
+  <p>The App includes no third-party SDKs of any kind — no analytics, advertising, attribution or crash-reporting SDKs. It contains no ads, does not track you across apps or websites, does not use IDFA, and does not request App Tracking Transparency authorisation. Whether system-level diagnostics and crash logs are sent to Apple is controlled by your choice under iOS Settings &gt; Privacy &amp; Security &gt; Analytics &amp; Improvements; that is unrelated to the App.</p>
+</section>
+<section>
+  <h2>7. Children's privacy</h2>
+  <p>The App is not designed for children and does not collect personal information from anyone. Because all records stay in local storage on the device, we never obtain, store or share anything a child writes. If you are a parent or guardian and believe there is an issue, please contact us using the details below.</p>
+</section>
+<section>
+  <h2>8. Changes to this policy</h2>
+  <p>When this policy changes, we will update the "Last updated" date at the top of this page. If a change affects how your information is handled, we will flag it in the App or in the release notes on the App Store. Continuing to use the App after a change takes effect means you accept the updated policy.</p>
+</section>
+<section>
+  <h2>9. Contact us</h2>
+  <p>If you have questions about this policy, or wish to exercise any rights relating to your data, please contact us:</p>
+<ul><li>Developer: &lt;开发者主体名称 / Developer Name&gt;</li><li>Contact email: <span class="ltr">yufei.cjn@outlook.com</span></li><li>Mailing address: &lt;通信地址 / Mailing Address&gt; (delete this line if not required in your jurisdiction)</li></ul>
+</section>
+<footer>
+  Flit
+</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0">
+<title>Flit 隐私政策</title>
+<meta name="description" content="Flit 隐私政策">
+<style>
+  :root {
+    --accent: #00704A;
+    --accent-dark: #00553A;
+    --bg: #F6F5F1;
+    --card: #FFFFFF;
+    --text: #24262B;
+    --muted: #8C8F96;
+    --border: #ECEBE6;
+    --code-bg: #EFEEE9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    padding: 2rem 1rem 4rem;
+    text-align: start;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 2.25rem; }
+  h1 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+  }
+  header .meta {
+    color: var(--muted);
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .lead {
+    margin: 0 0 1.5rem;
+    font-size: 0.98rem;
+    color: var(--text);
+  }
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.1rem;
+    text-align: start;
+  }
+  h2 {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+    margin-bottom: 0.7rem;
+    line-height: 1.45;
+  }
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 1.1rem 0 0.5rem;
+    line-height: 1.4;
+  }
+  p { margin: 0.55rem 0; }
+  p:first-of-type { margin-top: 0; }
+  ul { padding-inline-start: 1.25rem; margin: 0.55rem 0; }
+  li { margin-bottom: 0.35rem; }
+  li:last-child { margin-bottom: 0; }
+  strong { font-weight: 700; }
+  code {
+    background: var(--code-bg);
+    border-radius: 5px;
+    padding: 0.1em 0.35em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.88em;
+    direction: ltr;
+    unicode-bidi: embed;
+    word-break: break-all;
+  }
+  .ltr { direction: ltr; unicode-bidi: embed; }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin-top: 2rem;
+    line-height: 1.7;
+  }
+  @media (max-width: 480px) {
+    body { padding: 1.5rem 0.85rem 3rem; }
+    section { padding: 1.2rem 1.1rem; border-radius: 14px; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.05rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Flit 隐私政策</h1>
+  <p class="meta">生效日期：2026 年 11 月 6 日<br>最后更新日期：2026 年 11 月 6 日</p>
+</header>
+<p class="lead">Flit（下称「本应用」）是一款本地记录类应用：你可以随时记下一件事，并在之后为它追加补充，形成一条按时间排列的记录线。本政策说明本应用实际会处理哪些信息，以及这些信息如何被保存。请在使用前阅读。</p>
+<section>
+  <h2>一、本应用保存哪些信息</h2>
+  <p>你在本应用内主动输入或通过语音输入的内容会保存在你的设备上，包括：</p>
+<ul><li>每条记录的标题与正文（正文同时用于生成列表摘要）；</li><li>你为记录追加的补充文字及其时间戳；</li><li>记录的状态标记与置顶标记；</li><li>记录及其补充的创建、更新时间。</li></ul>
+<p>此外，应用会在本地保留上一份数据的备份副本，用于在主数据文件损坏时恢复（见第二节）。</p>
+<p>本应用不会收集你的设备型号、系统版本、设备标识符（IDFV 或 IDFA）、位置、通讯录、照片、相机、健康数据或支付信息，也不记录你的使用行为与操作路径。语音输入不生成音频文件、不保留录音，只把识别出的文字作为记录内容保存。</p>
+</section>
+<section>
+  <h2>二、信息存放在哪里</h2>
+  <p>记录以 JSON 文件的形式保存在本应用自己的沙盒目录（Application Support/Flit）中，同目录下另有一份 <code>.bak</code> 备份副本。保存时，应用先写入临时文件，再原子替换主文件，以降低写入中断造成数据损坏的风险；若主文件无法读取，应用会尝试从备份恢复。</p>
+<p>本应用没有服务器，不上传、不回传，也不同步这些内容到任何云端或第三方。我们无法查看、读取或恢复你的记录。</p>
+</section>
+<section>
+  <h2>三、网络访问、导出与分享</h2>
+  <p>本应用的核心功能完全离线可用，已保存的记录也不会通过网络传输。为判断当前网络是否可用（例如在离线时给出提示、在恢复联网后刷新列表），本应用会：</p>
+<ul><li>通过 Apple 的 Network 框架读取当前链路类型（Wi-Fi 或蜂窝网络），以及该链路是否按流量计费或处于低数据模式。这些信息仅在本机使用，不会上传。</li><li>向由 Apple 运营的地址 <code>https://captive.apple.com/hotspot-detect.html</code> 发送一次 HTTPS GET 请求，并根据请求成功或失败判断网络是否可达。该请求使用临时（ephemeral）会话，不携带 Cookie、不写入缓存，也不包含你的任何记录或你在应用内输入的文本。与任何 HTTPS 请求一样，作为该地址的运营方，Apple 可以看到请求来源的 IP 地址以及建立连接所需的常规网络信息；我们不会收到或保存这些信息。</li></ul>
+<p>除上述连通性检测外，本应用不会主动向外部发送任何数据。</p>
+<p>当前版本不提供导出或分享记录的功能，也不会通过 iOS 系统分享面板把内容交给其他应用。若未来版本加入该功能，我们会在使用前说明，并同步更新本政策。</p>
+<p>iOS 设备备份（iCloud 备份或电脑备份）是否包含本应用沙盒内的记录文件，取决于你的系统备份设置。该备份由 Apple 的系统功能执行，与本应用无关。</p>
+</section>
+<section>
+  <h2>四、系统权限与设备访问</h2>
+  <p>语音输入是唯一需要授权的功能。你第一次点击语音输入按钮时，iOS 会询问是否允许本应用使用麦克风；视所用的系统接口而定，iOS 也可能在同一时刻显示语音识别授权请求。本应用不请求通知、照片图库、相机、定位、通讯录与健康数据，也不会访问这些内容。</p>
+<h3>麦克风与语音输入</h3>
+<ul><li>用途：本应用把你所说的话转成记录正文，你可以在保存前修改。识别出的文字只会写入应用本地的数据文件（cards.json），此外不会生成任何内容。</li><li>授权时机：仅在你第一次使用语音输入时请求。本应用不会在启动时或后台开启麦克风；结束口述、离开编辑页或关闭应用时会立即停止录音。</li><li>音频不保存、不外传：本应用不生成音频文件，也不保留录音。语音输入使用系统的设备端语音识别，音频只在你本机处理，不会上传到 Apple 服务器或传给我们，识别出的文字也只保存在你设备上的本地数据文件中。如果你的机型或语言不支持设备端识别，应用会提示语音输入不可用，或降级为键盘输入，绝不会改走云端。</li><li>拒绝授权的影响：其他功能均可正常使用，你仍可照常手动输入、编辑记录。你可以稍后在 iOS「设置」中开启该权限，也可以随时关闭；关闭后语音输入将无法使用。</li></ul>
+<p>你可能会在 iOS「设置」中看到本应用的「无线数据」开关，这是系统对所有联网应用的通用控制项，并非本应用发起的授权请求。关闭后，应用仍可正常使用，只是网络状态检测可能失效。</p>
+<p>如果未来版本新增需要其他系统授权的功能，我们会在首次使用该功能前弹出系统授权请求并说明用途，同时在本页更新本政策。你可以随时在 iOS「设置」中关闭已授予的权限，关闭后相关功能可能无法使用。</p>
+</section>
+<section>
+  <h2>五、数据保留与删除</h2>
+  <ul><li>记录会一直保留在你的设备上，直到你主动删除。</li><li>你可以在应用内删除整条记录，也可以删除某条记录下的单条补充内容。</li><li>在 iOS 上卸载本应用，会一并删除应用沙盒内的主数据文件与备份文件。</li><li>删除操作不可撤销。由于数据仅保存在本地，且本应用不提供导出功能，我们无法为你恢复，请谨慎操作。</li></ul>
+</section>
+<section>
+  <h2>六、第三方 SDK、分析与广告</h2>
+  <p>本应用未接入任何第三方 SDK，包括统计分析、广告、归因与崩溃上报类 SDK；应用内不含广告，也不进行跨应用或跨网站的追踪，不使用 IDFA，也不请求 App Tracking Transparency 授权。系统层面的诊断与崩溃日志是否上传，取决于你在 iOS「设置 &gt; 隐私与安全性 &gt; 分析与改进」中的选择，与本应用无关。</p>
+</section>
+<section>
+  <h2>七、儿童隐私</h2>
+  <p>本应用不针对儿童设计，也不会主动收集任何个人信息。由于记录仅保存在设备本地，我们不会获取、存储或分享儿童填写的任何内容。如监护人认为存在相关问题，可通过下方联系方式与我们联系。</p>
+</section>
+<section>
+  <h2>八、本政策的变更</h2>
+  <p>本政策更新时，我们会同步修改本页顶部的「最后更新日期」。若变更涉及你信息的处理方式，我们会在应用内或 App Store 的版本说明中提示。变更生效后继续使用本应用，即视为你接受更新后的政策。</p>
+</section>
+<section>
+  <h2>九、联系我们</h2>
+  <p>如对本政策有疑问，或需要行使与数据相关的权利，请通过以下方式联系：</p>
+<ul><li>开发者：&lt;开发者主体名称 / Developer Name&gt;</li><li>联系邮箱：<span class="ltr">yufei.cjn@outlook.com</span></li><li>通信地址：&lt;通信地址 / Mailing Address&gt;（如所在司法辖区不要求，可删除此行）</li></ul>
+</section>
+<footer>
+  Flit
+</footer>
+</main>
+</body>
+</html>

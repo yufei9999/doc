@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0">
+<title>Política de privacidad de Flit</title>
+<meta name="description" content="Política de privacidad de Flit">
+<style>
+  :root {
+    --accent: #00704A;
+    --accent-dark: #00553A;
+    --bg: #F6F5F1;
+    --card: #FFFFFF;
+    --text: #24262B;
+    --muted: #8C8F96;
+    --border: #ECEBE6;
+    --code-bg: #EFEEE9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    padding: 2rem 1rem 4rem;
+    text-align: start;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 2.25rem; }
+  h1 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+  }
+  header .meta {
+    color: var(--muted);
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .lead {
+    margin: 0 0 1.5rem;
+    font-size: 0.98rem;
+    color: var(--text);
+  }
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.1rem;
+    text-align: start;
+  }
+  h2 {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+    margin-bottom: 0.7rem;
+    line-height: 1.45;
+  }
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 1.1rem 0 0.5rem;
+    line-height: 1.4;
+  }
+  p { margin: 0.55rem 0; }
+  p:first-of-type { margin-top: 0; }
+  ul { padding-inline-start: 1.25rem; margin: 0.55rem 0; }
+  li { margin-bottom: 0.35rem; }
+  li:last-child { margin-bottom: 0; }
+  strong { font-weight: 700; }
+  code {
+    background: var(--code-bg);
+    border-radius: 5px;
+    padding: 0.1em 0.35em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.88em;
+    direction: ltr;
+    unicode-bidi: embed;
+    word-break: break-all;
+  }
+  .ltr { direction: ltr; unicode-bidi: embed; }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin-top: 2rem;
+    line-height: 1.7;
+  }
+  @media (max-width: 480px) {
+    body { padding: 1.5rem 0.85rem 3rem; }
+    section { padding: 1.2rem 1.1rem; border-radius: 14px; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.05rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Política de privacidad de Flit</h1>
+  <p class="meta">Fecha de entrada en vigor: 6 de noviembre de 2026<br>Última actualización: 6 de noviembre de 2026</p>
+</header>
+<p class="lead">Flit (en adelante «la App») es una aplicación de notas que funciona únicamente en su dispositivo. Usted anota una idea en el momento en que se le ocurre y más tarde le añade ampliaciones, de modo que cada entrada va formando su propia línea temporal. Esta política describe qué información trata realmente la App y cómo se guarda. Le rogamos que la lea antes de empezar a utilizar la App.</p>
+<section>
+  <h2>1. Qué información almacena la App</h2>
+  <p>Todo lo que usted escribe o dicta en la App se guarda en su dispositivo, en concreto:</p>
+<ul><li>el título y el cuerpo de cada entrada (el cuerpo también se usa para generar el resumen de la lista);</li><li>las ampliaciones que añada a una entrada, junto con su fecha y hora;</li><li>la marca de estado de cada entrada y si está fijada;</li><li>las fechas de creación y modificación de las entradas y de sus ampliaciones.</li></ul>
+<p>La App también conserva localmente una copia de seguridad de los datos anteriores, utilizada para recuperarlos si el archivo de datos principal se corrompe (véase la sección 2).</p>
+<p>La App no recopila el modelo del dispositivo, la versión del sistema operativo, identificadores del dispositivo (IDFV o IDFA), datos de ubicación, contactos, fotografías, cámara, datos de salud ni información de pago. La entrada de voz no crea archivos de audio ni conserva grabaciones: solo se guarda el texto reconocido como contenido de la entrada, y tampoco registra su comportamiento de uso ni las rutas de navegación.</p>
+</section>
+<section>
+  <h2>2. Dónde se almacena su información</h2>
+  <p>Las entradas se guardan como un archivo JSON dentro del espacio de almacenamiento propio de la App (Application Support/Flit), junto con una copia de seguridad <code>.bak</code>. Al guardar, la App escribe primero un archivo temporal y luego sustituye el archivo principal de forma atómica, para reducir el riesgo de corrupción si se interrumpe la escritura; si no puede leer el archivo principal, intenta restaurarlo desde la copia de seguridad.</p>
+<p>La App no dispone de servidor: no carga, transmite ni sincroniza estos contenidos con ningún servicio en la nube ni con terceros. No podemos ver, leer ni recuperar sus entradas.</p>
+</section>
+<section>
+  <h2>3. Acceso a la red, exportación y uso compartido</h2>
+  <p>Las funciones principales de la App funcionan completamente sin conexión, y sus entradas guardadas nunca se transmiten por la red. Para determinar si la red está disponible (por ejemplo, para mostrar un aviso cuando no hay conexión y actualizar la lista al recuperarla), la App:</p>
+<ul><li>lee, mediante el framework Network de Apple, el tipo de conexión actual (Wi-Fi o datos móviles) y si esa conexión se factura por volumen o está en modo de bajo consumo de datos. Esta información se usa solo en su dispositivo y no se carga a ningún servidor.</li><li>envía una única solicitud HTTPS GET a <code>https://captive.apple.com/hotspot-detect.html</code>, una dirección operada por Apple, y considera el éxito o el fallo como señal de accesibilidad. La solicitud utiliza una sesión efímera, no lleva cookies, no escribe caché y no contiene ninguna de sus entradas ni el texto que haya introducido en la App. Como ocurre con cualquier solicitud HTTPS, Apple, en calidad de operador de esa dirección, puede ver la dirección IP de origen y la información de red habitual necesaria para establecer la conexión; nosotros no recibimos ni almacenamos esa información.</li></ul>
+<p>Aparte de esta comprobación de conectividad, la App no envía datos al exterior por iniciativa propia.</p>
+<p>La versión actual no ofrece ninguna función de exportación o uso compartido de entradas y tampoco entrega contenido a otras aplicaciones mediante el panel de compartir de iOS. Si una versión futura incorpora esa función, la explicaremos antes de su uso y actualizaremos esta política.</p>
+<p>Que una copia de seguridad del dispositivo iOS (copia de iCloud o del ordenador) incluya los archivos de entradas del espacio de almacenamiento de la App depende de su configuración de copia de seguridad del sistema. Esa copia la realiza una función del sistema de Apple y es ajena a la App.</p>
+</section>
+<section>
+  <h2>4. Permisos del sistema y acceso al dispositivo</h2>
+  <p>La entrada de voz es la única función que necesita un permiso. La primera vez que pulse el botón de entrada de voz, iOS le preguntará si la App puede usar el micrófono; según la API del sistema que utilice la App, es posible que iOS muestre también una solicitud de autorización para el reconocimiento de voz. La App no solicita permisos de notificaciones, fototeca, cámara, ubicación, contactos ni datos de salud, ni accede a ellos.</p>
+<h3>Micrófono y entrada de voz</h3>
+<ul><li>Para qué se usa: la App convierte lo que usted dice en el texto de una entrada, que puede editar antes de guardarla. El texto reconocido se escribe únicamente en el archivo de datos local de la App (cards.json); no se crea nada más.</li><li>Cuándo se solicita: solo la primera vez que utiliza la entrada de voz. La App no activa el micrófono al iniciarse ni en segundo plano, y la grabación se detiene en cuanto termina el dictado, sale del editor o cierra la App.</li><li>El audio no se guarda ni se envía: la App no crea ningún archivo de audio ni conserva grabaciones. La entrada de voz utiliza el reconocimiento de voz del propio dispositivo, por lo que el audio se procesa solo en su dispositivo: no se envía a servidores de Apple ni a nosotros, y el texto reconocido permanece en el archivo de datos local de su dispositivo. Si su dispositivo o su idioma no admiten el reconocimiento en el dispositivo, la App le indicará que la entrada de voz no está disponible o pasará a la entrada por teclado; nunca recurre a un servicio en la nube.</li><li>Si no concede el permiso: el resto de funciones sigue disponible y podrá seguir añadiendo y editando entradas con el teclado. Puede conceder el permiso más adelante en los Ajustes de iOS o revocarlo en cualquier momento; en tal caso la entrada de voz dejará de funcionar.</li></ul>
+<p>Es posible que vea en los Ajustes de iOS un interruptor de «Datos móviles» para la App; se trata de un control general del sistema para las aplicaciones que usan la red, no de una solicitud de autorización de la App. Si lo desactiva, la App seguirá funcionando, pero puede que su comprobación del estado de la red deje de funcionar.</p>
+<p>Si una versión futura incorpora alguna función que necesite otro permiso, mostraremos la solicitud estándar de iOS antes del primer uso, explicaremos para qué sirve y actualizaremos esta política en esta misma página. Puede revocar en cualquier momento los permisos concedidos desde los Ajustes de iOS; en tal caso, la función correspondiente podría dejar de estar disponible.</p>
+</section>
+<section>
+  <h2>5. Conservación y eliminación</h2>
+  <ul><li>Las entradas permanecen en su dispositivo hasta que usted las elimine.</li><li>Puede eliminar una entrada completa dentro de la App, así como eliminar por separado cada ampliación de una entrada.</li><li>Si desinstala la App en iOS, también se eliminarán el archivo de datos principal y el archivo de copia de seguridad del espacio de almacenamiento de la App.</li><li>La eliminación no se puede deshacer. Dado que los datos solo existen en su dispositivo y la App no ofrece función de exportación, no podemos recuperarlos por usted; elimine con cuidado.</li></ul>
+</section>
+<section>
+  <h2>6. SDK de terceros, analítica y publicidad</h2>
+  <p>La App no incluye ningún SDK de terceros: ni de analítica, ni de publicidad, ni de atribución, ni de informes de fallos. No contiene publicidad, no le rastrea entre aplicaciones ni sitios web, no utiliza IDFA y no solicita autorización de App Tracking Transparency. Que los diagnósticos y registros de fallos del sistema se envíen a Apple depende de la opción que usted elija en Ajustes de iOS &gt; Privacidad y seguridad &gt; Análisis y mejoras, y es ajena a la App.</p>
+</section>
+<section>
+  <h2>7. Privacidad de los menores</h2>
+  <p>La App no está diseñada para menores y no recopila datos personales de nadie. Como todas las entradas se guardan únicamente de forma local en el dispositivo, nunca obtenemos, almacenamos ni compartimos nada de lo que escriba un menor. Si usted es padre, madre o tutor legal y cree que existe algún problema, póngase en contacto con nosotros mediante los datos que figuran más abajo.</p>
+</section>
+<section>
+  <h2>8. Cambios en esta política</h2>
+  <p>Cuando modifiquemos esta política, actualizaremos la fecha de «Última actualización» que figura al inicio de esta página. Si el cambio afecta a la forma en que se trata su información, lo indicaremos en la App o en las notas de la versión publicadas en el App Store. Si sigue utilizando la App después de que un cambio entre en vigor, se entenderá que acepta la política actualizada.</p>
+</section>
+<section>
+  <h2>9. Cómo contactarnos</h2>
+  <p>Si tiene preguntas sobre esta política o desea ejercer algún derecho en relación con sus datos, puede contactarnos en:</p>
+<ul><li>Desarrollador: &lt;开发者主体名称 / Developer Name&gt;</li><li>Correo electrónico de contacto: <span class="ltr">yufei.cjn@outlook.com</span></li><li>Dirección postal: &lt;通信地址 / Mailing Address&gt; (elimine esta línea si no es obligatoria en su jurisdicción)</li></ul>
+</section>
+<footer>
+  Flit
+</footer>
+</main>
+</body>
+</html>
