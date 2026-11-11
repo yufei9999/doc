@@ -20,7 +20,7 @@ O Aplicativo não coleta modelo do dispositivo, versão do sistema operacional, 
 
 ## 2. Onde suas informações ficam armazenadas
 
-Os registros são mantidos como um arquivo JSON dentro do espaço de armazenamento privado do Aplicativo (Application Support/Flit), ao lado de uma cópia de segurança `.bak`. Ao salvar, o Aplicativo grava primeiro um arquivo temporário e depois substitui o arquivo principal de forma atômica, para reduzir o risco de corrupção se a gravação for interrompida; se não conseguir ler o arquivo principal, tenta restaurá-lo a partir da cópia de segurança.
+Os registros são mantidos como um arquivo JSON dentro do espaço de armazenamento privado do Aplicativo (Application Support/Floatage), ao lado de uma cópia de segurança `.bak`. Ao salvar, o Aplicativo grava primeiro um arquivo temporário e depois substitui o arquivo principal de forma atômica, para reduzir o risco de corrupção se a gravação for interrompida; se não conseguir ler o arquivo principal, tenta restaurá-lo a partir da cópia de segurança.
 
 O Aplicativo não possui servidor: não envia, não transmite nem sincroniza esse conteúdo com qualquer serviço em nuvem ou terceiro. Não temos acesso, não conseguimos ler e não podemos restaurar seus registros.
 

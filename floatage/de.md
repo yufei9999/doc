@@ -20,7 +20,7 @@ Die App erhebt keine Gerätemodell-, Betriebssystemversions-, Gerätekennungs- (
 
 ## 2. Wo Ihre Informationen gespeichert werden
 
-Die Einträge liegen als JSON-Datei in der Sandbox der App (Application Support/Flit), daneben eine `.bak`-Sicherungskopie. Beim Speichern schreibt die App zunächst eine temporäre Datei und ersetzt dann die Hauptdatei atomar, um das Risiko einer Beschädigung bei unterbrochenem Schreiben zu verringern; kann die Hauptdatei nicht gelesen werden, versucht die App die Wiederherstellung aus der Sicherung.
+Die Einträge liegen als JSON-Datei in der Sandbox der App (Application Support/Floatage), daneben eine `.bak`-Sicherungskopie. Beim Speichern schreibt die App zunächst eine temporäre Datei und ersetzt dann die Hauptdatei atomar, um das Risiko einer Beschädigung bei unterbrochenem Schreiben zu verringern; kann die Hauptdatei nicht gelesen werden, versucht die App die Wiederherstellung aus der Sicherung.
 
 Die App verfügt über keinen Server. Sie lädt diese Inhalte nicht hoch, überträgt sie nicht und synchronisiert sie nicht mit Cloud-Diensten oder Dritten. Wir können Ihre Einträge weder einsehen noch auslesen oder wiederherstellen.
 

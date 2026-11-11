@@ -20,7 +20,7 @@ The App does not collect your device model, OS version, device identifiers (IDFV
 
 ## 2. Where your information is stored
 
-Records are kept as a JSON file inside the App's own sandbox (Application Support/Flit), alongside a `.bak` backup copy. When saving, the App writes a temporary file and then replaces the main file atomically, to reduce the risk of corruption if a write is interrupted; if the main file cannot be read, the App tries to restore from the backup.
+Records are kept as a JSON file inside the App's own sandbox (Application Support/Floatage), alongside a `.bak` backup copy. When saving, the App writes a temporary file and then replaces the main file atomically, to reduce the risk of corruption if a write is interrupted; if the main file cannot be read, the App tries to restore from the backup.
 
 The App has no server. It does not upload, transmit or sync this content to any cloud service or third party. We cannot view, read or restore your records.
 

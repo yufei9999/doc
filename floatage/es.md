@@ -20,7 +20,7 @@ La App no recopila el modelo del dispositivo, la versión del sistema operativo,
 
 ## 2. Dónde se almacena su información
 
-Las entradas se guardan como un archivo JSON dentro del espacio de almacenamiento propio de la App (Application Support/Flit), junto con una copia de seguridad `.bak`. Al guardar, la App escribe primero un archivo temporal y luego sustituye el archivo principal de forma atómica, para reducir el riesgo de corrupción si se interrumpe la escritura; si no puede leer el archivo principal, intenta restaurarlo desde la copia de seguridad.
+Las entradas se guardan como un archivo JSON dentro del espacio de almacenamiento propio de la App (Application Support/Floatage), junto con una copia de seguridad `.bak`. Al guardar, la App escribe primero un archivo temporal y luego sustituye el archivo principal de forma atómica, para reducir el riesgo de corrupción si se interrumpe la escritura; si no puede leer el archivo principal, intenta restaurarlo desde la copia de seguridad.
 
 La App no dispone de servidor: no carga, transmite ni sincroniza estos contenidos con ningún servicio en la nube ni con terceros. No podemos ver, leer ni recuperar sus entradas.
 
