@@ -1,9 +1,9 @@
-# Datenschutzerklärung für Flit
+# Datenschutzerklärung für Floatage
 
 Inkrafttreten: 6. November 2026
 Zuletzt aktualisiert: 6. November 2026
 
-Flit (im Folgenden „die App“) ist eine Notiz-App, die ausschließlich lokal auf Ihrem Gerät arbeitet. Sie notieren einen Gedanken, sobald er Ihnen einfällt, und ergänzen ihn später um weitere Notizen, sodass aus jedem Eintrag nach und nach eine zeitlich geordnete Aufzeichnung entsteht. Diese Erklärung beschreibt, welche Informationen die App tatsächlich verarbeitet und wie sie gespeichert werden. Bitte lesen Sie sie, bevor Sie die App verwenden.
+Floatage (im Folgenden „die App“) ist eine Notiz-App, die ausschließlich lokal auf Ihrem Gerät arbeitet. Sie notieren einen Gedanken, sobald er Ihnen einfällt, und ergänzen ihn später um weitere Notizen, sodass aus jedem Eintrag nach und nach eine zeitlich geordnete Aufzeichnung entsteht. Diese Erklärung beschreibt, welche Informationen die App tatsächlich verarbeitet und wie sie gespeichert werden. Bitte lesen Sie sie, bevor Sie die App verwenden.
 
 ## 1. Welche Informationen die App speichert
 

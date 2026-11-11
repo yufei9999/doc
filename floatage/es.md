@@ -1,9 +1,9 @@
-# Política de privacidad de Flit
+# Política de privacidad de Floatage
 
 Fecha de entrada en vigor: 6 de noviembre de 2026
 Última actualización: 6 de noviembre de 2026
 
-Flit (en adelante «la App») es una aplicación de notas que funciona únicamente en su dispositivo. Usted anota una idea en el momento en que se le ocurre y más tarde le añade ampliaciones, de modo que cada entrada va formando su propia línea temporal. Esta política describe qué información trata realmente la App y cómo se guarda. Le rogamos que la lea antes de empezar a utilizar la App.
+Floatage (en adelante «la App») es una aplicación de notas que funciona únicamente en su dispositivo. Usted anota una idea en el momento en que se le ocurre y más tarde le añade ampliaciones, de modo que cada entrada va formando su propia línea temporal. Esta política describe qué información trata realmente la App y cómo se guarda. Le rogamos que la lea antes de empezar a utilizar la App.
 
 ## 1. Qué información almacena la App
 

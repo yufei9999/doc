@@ -1,9 +1,9 @@
-# Política de Privacidade do Flit
+# Política de Privacidade do Floatage
 
 Data de vigência: 6 de novembro de 2026
 Última atualização: 6 de novembro de 2026
 
-O Flit (doravante "o Aplicativo") é um aplicativo de anotações que funciona apenas no seu dispositivo. Você registra uma ideia no momento em que ela surge e, mais tarde, acrescenta complementações, de modo que cada registro passa a formar uma linha do tempo própria. Esta política descreve quais informações o Aplicativo realmente trata e como elas são guardadas. Leia-a antes de começar a usar o Aplicativo.
+O Floatage (doravante "o Aplicativo") é um aplicativo de anotações que funciona apenas no seu dispositivo. Você registra uma ideia no momento em que ela surge e, mais tarde, acrescenta complementações, de modo que cada registro passa a formar uma linha do tempo própria. Esta política descreve quais informações o Aplicativo realmente trata e como elas são guardadas. Leia-a antes de começar a usar o Aplicativo.
 
 ## 1. Quais informações o Aplicativo armazena
 

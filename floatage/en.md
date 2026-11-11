@@ -1,9 +1,9 @@
-# Privacy Policy for Flit
+# Privacy Policy for Floatage
 
 Effective date: November 6, 2026
 Last updated: November 6, 2026
 
-Flit ("the App") is a local note-taking app. You write down an item as it occurs to you, then add follow-up notes later, so that each item builds into a timeline of its own. This policy describes what the App actually does with information, and how that information is kept. Please read it before you start using the App.
+Floatage ("the App") is a local note-taking app. You write down an item as it occurs to you, then add follow-up notes later, so that each item builds into a timeline of its own. This policy describes what the App actually does with information, and how that information is kept. Please read it before you start using the App.
 
 ## 1. What the App stores
 
