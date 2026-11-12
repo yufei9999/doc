@@ -16,7 +16,7 @@ Todo lo que usted escribe o dicta en la App se guarda en su dispositivo, en conc
 
 La App también conserva localmente una copia de seguridad de los datos anteriores, utilizada para recuperarlos si el archivo de datos principal se corrompe (véase la sección 2).
 
-La App no recopila el modelo del dispositivo, la versión del sistema operativo, identificadores del dispositivo (IDFV o IDFA), datos de ubicación, contactos, fotografías, cámara, datos de salud ni información de pago. La entrada de voz no crea archivos de audio ni conserva grabaciones: solo se guarda el texto reconocido como contenido de la entrada, y tampoco registra su comportamiento de uso ni las rutas de navegación.
+La App no recopila el modelo del dispositivo, la versión del sistema operativo, identificadores del dispositivo (IDFV o IDFA), datos de ubicación, contactos, fotografías, cámara, datos de salud ni información de pago. La entrada de voz no crea archivos de audio ni conserva grabaciones: solo se guarda el texto reconocido como contenido de la entrada. La App tampoco registra su comportamiento de uso ni las rutas de navegación.
 
 ## 2. Dónde se almacena su información
 
@@ -28,7 +28,7 @@ La App no dispone de servidor: no carga, transmite ni sincroniza estos contenido
 
 La App no realiza ninguna solicitud de red ni utiliza ningún servidor. No contiene código de red y la app compilada tampoco se enlaza con los frameworks de red de Apple, por lo que sus entradas nunca se suben, transmiten ni sincronizan en ningún sitio.
 
-Todas las funciones se pueden usar sin conexión a la red, incluida la entrada de voz: el habla se reconoce en su dispositivo y el texto reconocido se escribe únicamente en el archivo de datos local. La disponibilidad de la entrada de voz depende de que el sistema tenga recursos de dictado para su idioma y de que el dictado del sistema esté activado; si falta cualquiera de las dos cosas, la entrada de voz se desactiva y la App muestra un aviso de que el reconocimiento de voz en el dispositivo no está disponible en ese momento y le sugiere revisar los ajustes de dictado del sistema o usar el teclado. Puede seguir escribiendo con el teclado, y la App nunca cambia a un método de reconocimiento que necesite conexión a la red.
+Todas las funciones se pueden usar sin conexión a la red, incluida la entrada de voz: el habla se reconoce en su dispositivo y el texto reconocido se escribe únicamente en el archivo de datos local. La disponibilidad de la entrada de voz depende de que el sistema tenga recursos de dictado para su idioma y de que el dictado del sistema esté activado; si no se cumple alguna de las dos condiciones, la entrada de voz se desactiva y la App muestra un aviso de que el reconocimiento de voz en el dispositivo no está disponible en ese momento y le sugiere revisar los ajustes de dictado del sistema o usar el teclado. Puede seguir escribiendo con el teclado, y la App nunca cambia a un método de reconocimiento que necesite conexión a la red.
 
 La versión actual no ofrece funciones de exportación ni de uso compartido, y no entrega contenido a otras apps mediante la hoja de compartir de iOS. Si una versión futura las añade, lo explicaremos antes de usarlas y actualizaremos esta política.
 
@@ -40,7 +40,7 @@ La entrada de voz es la única función que necesita un permiso. La primera vez 
 
 ### Micrófono y entrada de voz
 
-- Para qué se usa: la App convierte lo que usted dice en el texto de una entrada, que puede editar antes de guardarla. El texto reconocido se escribe únicamente en el archivo de datos local de la App (cards.json); no se crea nada más.
+- Para qué se usa: la App convierte lo que usted dice en el texto de una entrada, que puede editar antes de guardarla. El texto reconocido se escribe únicamente en el archivo de datos local de la App (cards.json); no se genera ningún otro contenido.
 - Cuándo se solicita: solo la primera vez que utiliza la entrada de voz. La App no activa el micrófono al iniciarse ni en segundo plano, y la grabación se detiene en cuanto termina el dictado, sale del editor o cierra la App.
 - El audio no se guarda ni se envía: la App no crea ningún archivo de audio ni conserva grabaciones. La entrada de voz utiliza el reconocimiento de voz del propio dispositivo, por lo que el audio se procesa solo en su dispositivo: no se envía a servidores de Apple ni a nosotros, y el texto reconocido permanece en el archivo de datos local de su dispositivo. Para ello se necesitan recursos de dictado para su idioma en el sistema y que el dictado del sistema esté activado; si no es así, la entrada de voz se desactiva y la App muestra un aviso de que el reconocimiento de voz en el dispositivo no está disponible en ese momento y le sugiere revisar los ajustes de dictado del sistema o usar el teclado. Nunca recurre a un método de reconocimiento que necesite conexión a la red.
 - Si no concede el permiso: el resto de funciones sigue disponible y podrá seguir añadiendo y editando entradas con el teclado. Puede conceder el permiso más adelante en los Ajustes de iOS o revocarlo en cualquier momento; en tal caso la entrada de voz dejará de funcionar.
@@ -52,7 +52,7 @@ Si una versión futura incorpora alguna función que necesite otro permiso, most
 - Las entradas permanecen en su dispositivo hasta que usted las elimine.
 - Puede eliminar una entrada completa dentro de la App, así como eliminar por separado cada ampliación de una entrada.
 - Si desinstala la App en iOS, también se eliminarán el archivo de datos principal y el archivo de copia de seguridad del espacio de almacenamiento de la App.
-- La eliminación no se puede deshacer. Dado que los datos solo existen en su dispositivo y la App no ofrece función de exportación, no podemos recuperarlos por usted; elimine con cuidado.
+- La eliminación no se puede deshacer. Dado que los datos solo existen en su dispositivo y la App no ofrece función de exportación, no podemos recuperarlos en su nombre; elimine con cuidado.
 
 ## 6. SDK de terceros, analítica y publicidad
 
@@ -60,7 +60,7 @@ La App no incluye ningún SDK de terceros: ni de analítica, ni de publicidad, n
 
 ## 7. Privacidad de los menores
 
-La App no está diseñada para menores y no recopila datos personales de nadie. Como todas las entradas se guardan únicamente de forma local en el dispositivo, nunca obtenemos, almacenamos ni compartimos nada de lo que escriba un menor. Si usted es padre, madre o tutor legal y cree que existe algún problema, póngase en contacto con nosotros mediante los datos que figuran más abajo.
+La App no está diseñada para menores y no recopila datos personales por cuenta propia. Como todas las entradas se guardan únicamente de forma local en el dispositivo, nunca obtenemos, almacenamos ni compartimos nada de lo que escriba un menor. Si usted es padre, madre o tutor legal y cree que existe algún problema, póngase en contacto con nosotros mediante los datos que figuran más abajo.
 
 ## 8. Cambios en esta política
 

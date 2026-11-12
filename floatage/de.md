@@ -7,7 +7,7 @@ Floatage (im Folgenden „die App“) ist eine Notiz-App, die ausschließlich lo
 
 ## 1. Welche Informationen die App speichert
 
-Alles, was Sie in die App eingeben oder über die Sprachaufnahme diktieren, wird auf Ihrem Gerät gespeichert, insbesondere:
+Alles, was Sie in die App eingeben oder per Sprachaufnahme diktieren, wird auf Ihrem Gerät gespeichert, insbesondere:
 
 - Titel und Text jedes Eintrags (der Text wird auch zur Erstellung der Listenzusammenfassung verwendet);
 - die von Ihnen hinzugefügten Ergänzungen samt Zeitstempel;
@@ -16,7 +16,7 @@ Alles, was Sie in die App eingeben oder über die Sprachaufnahme diktieren, wird
 
 Die App hält außerdem eine lokale Sicherungskopie des vorherigen Datenstands bereit, um bei einer Beschädigung der Hauptdatei wiederherstellen zu können (siehe Abschnitt 2).
 
-Die App erhebt keine Gerätemodell-, Betriebssystemversions-, Gerätekennungs- (IDFV oder IDFA), Standort-, Kontakt-, Foto-, Kamera-, Gesundheits- oder Zahlungsdaten. Die Sprachaufnahme erzeugt keine Audiodatei und behält keine Aufnahme; gespeichert wird nur der erkannte Text als Inhalt des Eintrags. Sie protokolliert auch nicht Ihr Nutzungsverhalten oder Ihre Navigationswege.
+Die App erhebt weder Angaben zum Gerätemodell oder zur Betriebssystemversion noch Gerätekennungen (IDFV oder IDFA) oder Standort-, Kontakt-, Foto-, Kamera-, Gesundheits- und Zahlungsdaten. Die Sprachaufnahme erzeugt keine Audiodatei und behält keine Aufnahme; gespeichert wird nur der erkannte Text als Inhalt des Eintrags. Sie protokolliert auch nicht Ihr Nutzungsverhalten oder Ihre Navigationswege.
 
 ## 2. Wo Ihre Informationen gespeichert werden
 
@@ -40,7 +40,7 @@ Die Sprachaufnahme ist die einzige Funktion, die eine Berechtigung benötigt. We
 
 ### Mikrofon und Sprachaufnahme
 
-- Zweck: Die App wandelt das Gesprochene in den Text eines Eintrags um, den Sie vor dem Speichern bearbeiten können. Der erkannte Text wird ausschließlich in die lokale Datendatei der App (cards.json) geschrieben; darüber hinaus entsteht nichts.
+- Zweck: Die App wandelt das Gesprochene in den Text eines Eintrags um, den Sie vor dem Speichern bearbeiten können. Der erkannte Text wird ausschließlich in die lokale Datendatei der App (cards.json) geschrieben; darüber hinaus wird nichts Weiteres erzeugt.
 - Zeitpunkt der Abfrage: nur beim ersten Verwenden der Sprachaufnahme. Die App schaltet das Mikrofon weder beim Start noch im Hintergrund ein, und die Aufnahme endet, sobald Sie das Diktieren beenden, den Editor verlassen oder die App schließen.
 - Keine Speicherung und keine Übertragung der Aufnahme: Die App erzeugt keine Audiodatei und behält keine Aufnahme. Die Sprachaufnahme nutzt die Spracherkennung direkt auf dem Gerät. Die Aufnahme wird daher ausschließlich auf Ihrem Gerät verarbeitet und weder an Server von Apple noch an uns übermittelt; auch der erkannte Text bleibt in der lokalen Datendatei auf Ihrem Gerät. Voraussetzung sind Diktatressourcen für Ihre Sprache im System und ein aktiviertes Systemdiktat. Fehlen sie, wird die Sprachaufnahme deaktiviert und die App meldet: „Die Spracherkennung auf dem Gerät ist derzeit nicht verfügbar. Bitte prüfen Sie die Diktateinstellungen des Systems oder verwenden Sie die Tastatur.“ Auf eine Erkennung, die eine Netzwerkverbindung benötigt, wird nie zurückgegriffen.
 - Wenn Sie die Berechtigung ablehnen: Alle anderen Funktionen bleiben verfügbar, und Sie können Einträge wie gewohnt über die Tastatur hinzufügen und bearbeiten. Sie können die Berechtigung später in den iOS-Einstellungen erteilen oder jederzeit widerrufen; die Sprachaufnahme ist danach nicht mehr verfügbar.
@@ -56,11 +56,11 @@ Sollte eine künftige Version eine Funktion einführen, die eine weitere Berecht
 
 ## 6. SDKs, Analyse und Werbung durch Dritte
 
-Die App enthält keinerlei SDKs von Dritten – weder für Analyse noch für Werbung, Attribution oder Absturzberichte. Sie zeigt keine Werbung, verfolgt Sie nicht über Apps oder Websites hinweg, verwendet keine IDFA und fordert keine Berechtigung nach App Tracking Transparency an. Ob systemweite Diagnose- und Absturzdaten an Apple übermittelt werden, hängt von Ihrer Einstellung unter iOS > Einstellungen > Datenschutz & Sicherheit > Analyse & Verbesserungen ab und hat mit der App nichts zu tun.
+Die App enthält keinerlei SDKs von Dritten – weder für Analyse noch für Werbung, Attribution oder Absturzberichte. Sie zeigt keine Werbung, verfolgt Sie nicht über Apps oder Websites hinweg, verwendet keine IDFA und fordert keine Berechtigung nach App Tracking Transparency an. Ob systemweite Diagnose- und Absturzdaten an Apple übermittelt werden, hängt von Ihrer Einstellung unter iOS > Einstellungen > Datenschutz & Sicherheit > Analyse & Verbesserungen ab und steht in keinem Zusammenhang mit der App.
 
 ## 7. Datenschutz für Kinder
 
-Die App ist nicht für Kinder konzipiert und erhebt von niemandem personenbezogene Daten. Da alle Einträge ausschließlich lokal gespeichert werden, erhalten, speichern oder teilen wir keine Inhalte, die ein Kind eingibt. Wenn Sie als Erziehungsberechtigte Person Bedenken haben, kontaktieren Sie uns bitte über die untenstehenden Angaben.
+Die App ist nicht für Kinder konzipiert und erhebt selbst keine personenbezogenen Daten. Da alle Einträge ausschließlich lokal gespeichert werden, erhalten, speichern oder teilen wir keine Inhalte, die ein Kind eingibt. Wenn Sie als Erziehungsberechtigte Bedenken haben, kontaktieren Sie uns bitte über die untenstehenden Angaben.
 
 ## 8. Änderungen dieser Erklärung
 

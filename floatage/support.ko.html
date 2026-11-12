@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0">
+<title>Floatage 지원</title>
+<meta name="description" content="Floatage 지원 페이지입니다. 문의처, 개인정보 처리방침, 자주 묻는 질문을 안내합니다.">
+<style>
+  :root {
+    --accent: #00704A;
+    --accent-dark: #00553A;
+    --bg: #F6F5F1;
+    --card: #FFFFFF;
+    --text: #24262B;
+    --muted: #8C8F96;
+    --border: #ECEBE6;
+    --code-bg: #EFEEE9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    padding: 2rem 1rem 4rem;
+    text-align: start;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 1.6rem; }
+  h1 { font-size: 1.9rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.3; }
+  header .meta { color: var(--muted); margin-top: 0.5rem; font-size: 0.95rem; }
+  .lang-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.45rem; margin-top: 1rem; }
+  .lang-nav a {
+    display: inline-block; padding: 0.3rem 0.75rem; border-radius: 999px;
+    border: 1px solid var(--border); background: var(--card);
+    color: var(--accent-dark); font-size: 0.82rem; font-weight: 600; text-decoration: none;
+  }
+  .lang-nav a[aria-current="page"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  section {
+    background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+    padding: 1.5rem 1.75rem; margin-bottom: 1.1rem; text-align: start;
+  }
+  h2 { font-size: 1.12rem; font-weight: 700; color: var(--accent-dark); margin-bottom: 0.7rem; line-height: 1.45; }
+  h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin: 1.15rem 0 0.35rem; line-height: 1.45; }
+  h3:first-of-type { margin-top: 0.4rem; }
+  p { margin: 0.55rem 0; }
+  p:first-of-type { margin-top: 0; }
+  ul { padding-inline-start: 1.25rem; margin: 0.55rem 0; }
+  li { margin-bottom: 0.35rem; }
+  li:last-child { margin-bottom: 0; }
+  a { color: var(--accent-dark); }
+  code {
+    background: var(--code-bg); border-radius: 5px; padding: 0.1em 0.35em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.88em; word-break: break-all;
+  }
+  .ltr { direction: ltr; unicode-bidi: embed; }
+  .contact-list { list-style: none; padding: 0; }
+  .contact-list li { margin-bottom: 0.5rem; }
+  .label { font-weight: 600; }
+  .lead { margin: 0 0 1.5rem; font-size: 0.98rem; }
+  footer { text-align: center; color: var(--muted); font-size: 0.82rem; margin-top: 2rem; line-height: 1.7; }
+  @media (max-width: 480px) {
+    body { padding: 1.5rem 0.85rem 3rem; }
+    section { padding: 1.2rem 1.1rem; border-radius: 14px; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.05rem; }
+    .lang-nav { gap: 0.35rem; }
+    .lang-nav a { padding: 0.26rem 0.6rem; font-size: 0.78rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Floatage 지원</h1>
+  <p class="meta">사용 안내, 자주 묻는 질문, 문의처</p>
+  <nav class="lang-nav">
+    <a href="support.zh-Hans.html">简体中文</a>
+    <a href="support.zh-Hant.html">繁體中文</a>
+    <a href="support.en.html">English</a>
+    <a href="support.ja.html">日本語</a>
+    <a href="support.ko.html" aria-current="page">한국어</a>
+    <a href="support.de.html">Deutsch</a>
+    <a href="support.es.html">Español</a>
+    <a href="support.pt.html">Português</a>
+    <a href="support.ar.html">العربية</a>
+  </nav>
+</header>
+
+<p class="lead">Floatage는 기기 안에서만 동작하는 가벼운 아이디어 카드 앱입니다. 떠오른 생각을 그때그때 적고 나중에 이어서 덧붙이면, 카드마다 고유한 시간 흐름이 만들어집니다. 모든 내용은 기기에만 저장되며 계정이 필요 없습니다. 앱 뒤에 서버가 없고, 완전히 오프라인으로 동작합니다.</p>
+
+<section>
+  <h2>자주 묻는 질문</h2>
+  <h3>데이터는 어디에 저장되며, 삭제한 데이터는 복구할 수 있나요?</h3>
+  <p>카드는 앱 샌드박스 안의 <code>cards.json</code>과 <code>.bak</code> 백업에만 저장됩니다. 어디로도 업로드하거나 동기화하지 않습니다. 앱에서 카드를 삭제하면 기기의 파일에서 즉시 삭제되며, 앱을 삭제하면 이 파일들도 함께 삭제됩니다. 앱 안에서는 복구할 수 없습니다. 이전에 iCloud 또는 컴퓨터 백업을 만들어 두었다면 복구 가능 여부는 해당 백업과 백업 시점에 따라 달라지며, 복구는 시스템 백업을 통해야 합니다.</p>
+
+  <h3>마이크와 음성 인식 권한은 왜 필요한가요?</h3>
+  <p>음성 입력에만 사용합니다. 음성 버튼을 누르고 말한 내용을 카드 텍스트로 바꿉니다. 권한은 음성 입력을 처음 사용할 때만 요청하며, 앱을 실행할 때나 백그라운드에서 마이크를 켜지 않고 녹음을 파일로 저장하지도 않습니다. 권한을 허용하지 않아도 다른 기능은 그대로 쓸 수 있고 키보드로 입력할 수 있습니다.</p>
+
+  <h3>음성이 업로드되나요? 오디오가 저장되나요?</h3>
+  <p>아니요. 음성 입력은 기기 내 음성 인식만 사용하므로 오디오가 기기 밖으로 나가지 않으며, Apple 서버나 당사로 전송되지 않습니다. 오디오 파일을 만들거나 보관하지도 않습니다. 기기의 <code>cards.json</code>에 기록되는 것은 인식된 텍스트뿐입니다.</p>
+
+  <h3>시스템 받아쓰기가 꺼져 있거나 기기 내 인식을 쓸 수 없으면 어떻게 하나요?</h3>
+  <p>이때는 음성 입력이 꺼지고 “기기 내 음성 인식을 현재 사용할 수 없습니다. 시스템 받아쓰기 설정을 확인하거나 키보드 입력으로 전환해 주세요.”라는 안내가 표시됩니다. iOS “설정” &gt; “일반” &gt; “키보드”에서 받아쓰기가 켜져 있고 해당 언어의 받아쓰기 리소스가 내려받아져 있는지 확인하거나, 키보드로 입력하시면 됩니다. 네트워크 연결이 필요한 인식 방식으로 전환되지는 않습니다.</p>
+
+  <h3>네트워크 연결이나 계정이 필요한가요?</h3>
+  <p>둘 다 필요하지 않습니다. 앱은 완전히 오프라인으로 동작하며 네트워크 요청을 보내지 않고 서버도 사용하지 않습니다. 계정, 로그인, 구독도 없습니다.</p>
+
+  <h3>어떤 언어를 지원하며 어떻게 바꾸나요?</h3>
+  <p>인터페이스는 중국어 간체, 중국어 번체, 영어, 일본어, 한국어, 독일어, 스페인어, 포르투갈어, 아랍어를 지원하며 iOS 시스템 언어(“설정” &gt; “일반” &gt; “언어 및 지역”)를 따릅니다. 시스템 언어가 지원 범위에 없으면 중국어 간체로 표시됩니다. 앱 안에도 언어 설정이 있지만 이는 날짜 형식에만 영향을 주며 인터페이스 문구는 바뀌지 않습니다.</p>
+
+  <h3>지원하는 최소 iOS 버전은 무엇인가요?</h3>
+  <p>iOS 17.0 이상입니다.</p>
+
+</section>
+
+<section>
+  <h2>문의처</h2>
+  <ul class="contact-list">
+    <li><span class="label">지원 이메일:</span> <a class="ltr" href="mailto:yufei.cjn@outlook.com">yufei.cjn@outlook.com</a></li>
+    <li><a href="ko.html">Floatage 개인정보 처리방침</a></li>
+  </ul>
+</section>
+
+<footer>
+  Floatage · 최종 업데이트: 2026-11-09
+</footer>
+</main>
+</body>
+</html>

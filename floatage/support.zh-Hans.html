@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0">
+<title>Floatage 支持</title>
+<meta name="description" content="Floatage 支持页面：联系方式、隐私政策与常见问题。">
+<style>
+  :root {
+    --accent: #00704A;
+    --accent-dark: #00553A;
+    --bg: #F6F5F1;
+    --card: #FFFFFF;
+    --text: #24262B;
+    --muted: #8C8F96;
+    --border: #ECEBE6;
+    --code-bg: #EFEEE9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    padding: 2rem 1rem 4rem;
+    text-align: start;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 1.6rem; }
+  h1 { font-size: 1.9rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.3; }
+  header .meta { color: var(--muted); margin-top: 0.5rem; font-size: 0.95rem; }
+  .lang-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.45rem; margin-top: 1rem; }
+  .lang-nav a {
+    display: inline-block; padding: 0.3rem 0.75rem; border-radius: 999px;
+    border: 1px solid var(--border); background: var(--card);
+    color: var(--accent-dark); font-size: 0.82rem; font-weight: 600; text-decoration: none;
+  }
+  .lang-nav a[aria-current="page"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  section {
+    background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+    padding: 1.5rem 1.75rem; margin-bottom: 1.1rem; text-align: start;
+  }
+  h2 { font-size: 1.12rem; font-weight: 700; color: var(--accent-dark); margin-bottom: 0.7rem; line-height: 1.45; }
+  h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin: 1.15rem 0 0.35rem; line-height: 1.45; }
+  h3:first-of-type { margin-top: 0.4rem; }
+  p { margin: 0.55rem 0; }
+  p:first-of-type { margin-top: 0; }
+  ul { padding-inline-start: 1.25rem; margin: 0.55rem 0; }
+  li { margin-bottom: 0.35rem; }
+  li:last-child { margin-bottom: 0; }
+  a { color: var(--accent-dark); }
+  code {
+    background: var(--code-bg); border-radius: 5px; padding: 0.1em 0.35em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.88em; word-break: break-all;
+  }
+  .ltr { direction: ltr; unicode-bidi: embed; }
+  .contact-list { list-style: none; padding: 0; }
+  .contact-list li { margin-bottom: 0.5rem; }
+  .label { font-weight: 600; }
+  .lead { margin: 0 0 1.5rem; font-size: 0.98rem; }
+  footer { text-align: center; color: var(--muted); font-size: 0.82rem; margin-top: 2rem; line-height: 1.7; }
+  @media (max-width: 480px) {
+    body { padding: 1.5rem 0.85rem 3rem; }
+    section { padding: 1.2rem 1.1rem; border-radius: 14px; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.05rem; }
+    .lang-nav { gap: 0.35rem; }
+    .lang-nav a { padding: 0.26rem 0.6rem; font-size: 0.78rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Floatage 支持</h1>
+  <p class="meta">使用帮助、常见问题与联系方式</p>
+  <nav class="lang-nav">
+    <a href="support.zh-Hans.html" aria-current="page">简体中文</a>
+    <a href="support.zh-Hant.html">繁體中文</a>
+    <a href="support.en.html">English</a>
+    <a href="support.ja.html">日本語</a>
+    <a href="support.ko.html">한국어</a>
+    <a href="support.de.html">Deutsch</a>
+    <a href="support.es.html">Español</a>
+    <a href="support.pt.html">Português</a>
+    <a href="support.ar.html">العربية</a>
+  </nav>
+</header>
+
+<p class="lead">Floatage 是一款轻量的本地想法卡片应用。随手记下想到的事，之后有进展再补充一条，每一张卡片都会长成属于自己的时间线。所有内容只保存在你的设备上：不需要账号，应用没有服务器，也完全离线运行。</p>
+
+<section>
+  <h2>常见问题</h2>
+  <h3>数据保存在哪里？删除后能否恢复？</h3>
+  <p>卡片只保存在本应用沙盒内的 <code>cards.json</code> 及其 <code>.bak</code> 备份中，不上传、不同步到任何地方。在应用内删除卡片会立即从本地文件中移除，卸载应用时这些文件也会一并删除。删除后无法在应用内恢复；如果你此前做过 iCloud 或电脑备份，能否恢复取决于那份备份与备份时间，需要通过系统备份完成。</p>
+
+  <h3>为什么需要麦克风与语音识别权限？</h3>
+  <p>只用于语音输入：点按语音按钮后，把你说的话转成卡片文字。应用只在你第一次使用语音输入时请求权限，不会在启动时或后台开启麦克风，也不会把录音保存成文件。拒绝授权不影响其他功能，你仍可用键盘输入。</p>
+
+  <h3>语音识别会上传吗？会保存音频吗？</h3>
+  <p>不会。语音输入强制在设备端完成识别，音频不离开你的设备，也不会上传到 Apple 服务器或传给我们；应用不会生成或保留任何音频文件。只有识别出的文字会写入本地的 <code>cards.json</code>。</p>
+
+  <h3>系统听写未开启或设备端识别不可用时怎么办？</h3>
+  <p>此时语音输入会停用，并提示「设备端语音识别当前不可用，请检查系统听写设置或改用键盘」。你可以前往 iOS「设置」&gt;「通用」&gt;「键盘」确认「启用听写」已打开，并已下载当前语言的听写资源；也可以直接改用键盘输入。应用不会改用需要联网的识别方式。</p>
+
+  <h3>是否需要联网或账号？</h3>
+  <p>都不需要。应用完全离线运行，不发起任何网络请求、不使用服务器，也没有账号、登录或订阅。</p>
+
+  <h3>支持哪些语言？如何切换？</h3>
+  <p>界面支持简体中文、繁体中文、英语、日语、韩语、德语、西班牙语、葡萄牙语和阿拉伯语，跟随 iOS 系统语言（「设置」&gt;「通用」&gt;「语言与地区」）；系统语言不在支持范围内时，界面以简体中文显示。应用内也有语言选项，但它只影响日期格式，不改变界面文案。</p>
+
+  <h3>支持的最低 iOS 版本是多少？</h3>
+  <p>iOS 17.0 或更高版本。</p>
+
+</section>
+
+<section>
+  <h2>联系我们</h2>
+  <ul class="contact-list">
+    <li><span class="label">支持邮箱：</span> <a class="ltr" href="mailto:yufei.cjn@outlook.com">yufei.cjn@outlook.com</a></li>
+    <li><a href="zh-Hans.html">Floatage 隐私政策</a></li>
+  </ul>
+</section>
+
+<footer>
+  Floatage · 最后更新：2026-11-09
+</footer>
+</main>
+</body>
+</html>
