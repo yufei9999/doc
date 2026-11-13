@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0">
+<title>Personvernerklæring for Floatage</title>
+<meta name="description" content="Personvernerklæring for Floatage">
+<style>
+  :root {
+    --accent: #00704A;
+    --accent-dark: #00553A;
+    --bg: #F6F5F1;
+    --card: #FFFFFF;
+    --text: #24262B;
+    --muted: #8C8F96;
+    --border: #ECEBE6;
+    --code-bg: #EFEEE9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    padding: 2rem 1rem 4rem;
+    text-align: start;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 2.25rem; }
+  h1 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+  }
+  header .meta {
+    color: var(--muted);
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .lead {
+    margin: 0 0 1.5rem;
+    font-size: 0.98rem;
+    color: var(--text);
+  }
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.1rem;
+    text-align: start;
+  }
+  h2 {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+    margin-bottom: 0.7rem;
+    line-height: 1.45;
+  }
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 1.1rem 0 0.5rem;
+    line-height: 1.4;
+  }
+  p { margin: 0.55rem 0; }
+  p:first-of-type { margin-top: 0; }
+  ul { padding-inline-start: 1.25rem; margin: 0.55rem 0; }
+  li { margin-bottom: 0.35rem; }
+  li:last-child { margin-bottom: 0; }
+  strong { font-weight: 700; }
+  code {
+    background: var(--code-bg);
+    border-radius: 5px;
+    padding: 0.1em 0.35em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.88em;
+    direction: ltr;
+    unicode-bidi: embed;
+    word-break: break-all;
+  }
+  .ltr { direction: ltr; unicode-bidi: embed; }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin-top: 2rem;
+    line-height: 1.7;
+  }
+  @media (max-width: 480px) {
+    body { padding: 1.5rem 0.85rem 3rem; }
+    section { padding: 1.2rem 1.1rem; border-radius: 14px; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.05rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Personvernerklæring for Floatage</h1>
+  <p class="meta">Ikrafttredelsesdato: 6. november 2026<br>Sist oppdatert: 6. november 2026</p>
+</header>
+<p class="lead">Floatage («appen») er en lokal notatapp. Du skriver ned noe idet du kommer på det, og legger til tilleggsnotater senere, slik at hvert element bygger seg opp til en egen tidslinje. Denne erklæringen beskriver hva appen faktisk gjør med opplysninger, og hvordan de oppbevares. Les den før du begynner å bruke appen.</p>
+<section>
+  <h2>1. Hva appen lagrer</h2>
+  <p>Alt du skriver eller dikterer inn i appen, lagres på enheten din, inkludert:</p>
+<ul><li>tittelen og brødteksten i hver oppføring (brødteksten brukes også til å lage sammendraget i listen);</li><li>tilleggsnotater du legger til en oppføring, sammen med tidsstemplene deres;</li><li>statusflagget til hver oppføring og om den er festet;</li><li>opprettelses- og endringstidspunktet for oppføringer og tilleggsnotater.</li></ul>
+<p>Appen oppbevarer også én lokal sikkerhetskopi av de forrige dataene, som brukes til å gjenopprette hvis hoveddatafilen blir skadet (se avsnitt 2).</p>
+<p>Appen samler ikke inn enhetsmodell, OS-versjon, enhetsidentifikatorer (IDFV eller IDFA), posisjon, kontakter, bilder, kamera, helsedata eller betalingsinformasjon, og den logger ikke bruksatferd eller navigasjonsveier. Taleinndata lager ingen lydfil og tar ikke vare på noe opptak: bare den gjenkjente teksten lagres, som en del av oppføringen.</p>
+</section>
+<section>
+  <h2>2. Hvor opplysningene dine lagres</h2>
+  <p>Oppføringene lagres som en JSON-fil i appens egen sandkasse (Application Support/Floatage), sammen med en sikkerhetskopi med endelsen <code>.bak</code>. Når appen lagrer, skriver den først en midlertidig fil og erstatter deretter hovedfilen atomisk, for å redusere risikoen for skade hvis en skriving avbrytes. Hvis hovedfilen ikke kan leses, prøver appen å gjenopprette fra sikkerhetskopien.</p>
+<p>Appen har ingen server. Den laster ikke opp, sender ikke videre og synkroniserer ikke dette innholdet til noen skytjeneste eller tredjepart. Vi kan ikke se, lese eller gjenopprette oppføringene dine.</p>
+</section>
+<section>
+  <h2>3. Nettverkstilgang, eksport og deling</h2>
+  <p>Appen gjør ingen nettverksforespørsler og bruker ingen server. Den inneholder ingen nettverkskode, og den bygde appen kobles ikke mot Apples nettverksrammeverk, så oppføringene dine lastes aldri opp, sendes aldri videre og synkroniseres aldri noe sted.</p>
+<p>Alle funksjoner virker uten nettforbindelse, også taleinndata: talen gjenkjennes på enheten din, og den gjenkjente teksten skrives bare til den lokale datafilen. Taleinndata forutsetter at systemet har dikteringsressurser for språket ditt, og at systemdikteringen er slått på. Hvis en av delene mangler, slås taleinndata av, og appen viser et varsel om at talegjenkjenning på enheten ikke er tilgjengelig nå, og foreslår å sjekke dikteringsinnstillingene i systemet eller bruke tastaturet. Du kan da fortsette å skrive, og appen bytter aldri til en gjenkjenningsmetode som krever nettforbindelse.</p>
+<p>Den nåværende versjonen har ingen eksport- eller delingsfunksjon og sender ikke innhold til andre apper via delingsarket i iOS. Hvis en fremtidig versjon legger til en slik funksjon, forklarer vi den før bruk og oppdaterer denne erklæringen.</p>
+<p>Hvorvidt en sikkerhetskopi av en iOS-enhet (iCloud eller datamaskin) inneholder oppføringsfilene i appens sandkasse, avhenger av innstillingene for systemsikkerhetskopiering. Denne sikkerhetskopien utføres av en Apple-systemfunksjon og har ingenting med appen å gjøre.</p>
+</section>
+<section>
+  <h2>4. Systemtillatelser og tilgang til enheten</h2>
+  <p>Taleinndata er den eneste funksjonen som krever tillatelse. Første gang du trykker på knappen for taleinndata, spør iOS om appen kan bruke mikrofonen. Avhengig av system-API-et appen bruker, kan iOS også vise en forespørsel om tillatelse til talegjenkjenning på samme tidspunkt. Appen ber ikke om varsler, bildebibliotek, kamera, posisjon, kontakter eller helsedata, og får heller ikke tilgang til dem.</p>
+<h3>Mikrofon og taleinndata</h3>
+<ul><li>Hva det brukes til: Appen gjør det du sier om til teksten i en oppføring, som du kan redigere før du lagrer. Den gjenkjente teksten skrives bare til appens lokale datafil (cards.json); ingenting annet opprettes.</li><li>Når tillatelsen bes om: Bare første gang du bruker taleinndata. Appen åpner ikke mikrofonen ved oppstart eller i bakgrunnen, og opptaket stopper så snart du er ferdig med å diktere, forlater redigeringsvisningen eller lukker appen.</li><li>Lyd lagres ikke og sendes ikke: Appen lager ingen lydfil og tar ikke vare på noe opptak. Taleinndata bruker systemets talegjenkjenning på enheten, så lyden behandles bare på enheten din – den lastes ikke opp til Apples servere eller til oss, og den gjenkjente teksten blir liggende i den lokale datafilen på enheten din. Dette forutsetter at dikteringsressursene for språket ditt finnes, og at systemdikteringen er slått på. Hvis ikke, slås taleinndata av, og appen viser et varsel om at talegjenkjenning på enheten ikke er tilgjengelig nå, og foreslår å sjekke dikteringsinnstillingene i systemet eller bruke tastaturet. Den faller aldri tilbake på en gjenkjenningsmetode som krever nettforbindelse.</li><li>Hvis du avslår: Alle andre funksjoner er fortsatt tilgjengelige, og du kan fortsette å legge til og redigere oppføringer ved å skrive. Du kan gi tillatelsen senere i iOS-innstillingene, eller trekke den tilbake når som helst; taleinndata slutter da å virke.</li></ul>
+<p>Hvis en fremtidig versjon innfører en funksjon som krever en annen tillatelse, viser vi den vanlige forespørselen i iOS før funksjonen tas i bruk, forklarer formålet og oppdaterer denne erklæringen på denne siden. Du kan når som helst trekke tilbake en tillatelse i iOS-innstillingene; den tilknyttede funksjonen kan da bli utilgjengelig.</p>
+</section>
+<section>
+  <h2>5. Lagring og sletting</h2>
+  <ul><li>Oppføringer blir liggende på enheten din til du sletter dem.</li><li>Du kan slette en hel oppføring i appen, eller slette et enkelt tilleggsnotat i en oppføring.</li><li>Hvis du sletter appen fra iPhone, slettes også hoveddatafilen og sikkerhetskopifilen i appens sandkasse.</li><li>Sletting kan ikke angres. Siden dataene bare finnes på enheten din og appen ikke har noen eksportfunksjon, kan vi ikke gjenopprette dem for deg. Vær derfor forsiktig når du sletter.</li></ul>
+</section>
+<section>
+  <h2>6. Tredjeparts-SDK-er, analyse og annonsering</h2>
+  <p>Appen inneholder ingen tredjeparts-SDK-er av noe slag – ingen SDK-er for analyse, annonsering, attribusjon eller krasjrapportering. Den inneholder ingen annonser, sporer deg ikke på tvers av apper eller nettsteder, bruker ikke IDFA og ber ikke om tillatelse til App Tracking Transparency. Hvorvidt systemdiagnostikk og krasjlogger sendes til Apple, styres av valget ditt under iOS-innstillinger &gt; Personvern og sikkerhet &gt; Analyse og forbedringer. Det har ingenting med appen å gjøre.</p>
+</section>
+<section>
+  <h2>7. Barns personvern</h2>
+  <p>Appen er ikke utformet for barn og samler ikke inn personopplysninger fra noen. Siden alle oppføringer blir liggende i lokal lagring på enheten, får vi aldri tilgang til, lagrer eller deler noe som helst som et barn skriver. Hvis du er forelder eller foresatt og mener det er et problem, kan du kontakte oss med opplysningene nedenfor.</p>
+</section>
+<section>
+  <h2>8. Endringer i denne erklæringen</h2>
+  <p>Når denne erklæringen endres, oppdaterer vi datoen for «Sist oppdatert» øverst på denne siden. Hvis en endring påvirker hvordan opplysningene dine håndteres, gjør vi oppmerksom på det i appen eller i versjonsnotatene på App Store. Hvis du fortsetter å bruke appen etter at en endring har trådt i kraft, godtar du den oppdaterte erklæringen.</p>
+</section>
+<section>
+  <h2>9. Kontakt oss</h2>
+  <p>Hvis du har spørsmål om denne erklæringen, eller ønsker å utøve rettigheter knyttet til dataene dine, kan du kontakte oss:</p>
+<ul><li>E-post for kontakt: <span class="ltr">yufei.cjn@outlook.com</span></li></ul>
+</section>
+<footer>
+  Floatage
+</footer>
+</main>
+</body>
+</html>

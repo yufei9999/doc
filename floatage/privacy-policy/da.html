@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0">
+<title>Privatlivspolitik for Floatage</title>
+<meta name="description" content="Privatlivspolitik for Floatage">
+<style>
+  :root {
+    --accent: #00704A;
+    --accent-dark: #00553A;
+    --bg: #F6F5F1;
+    --card: #FFFFFF;
+    --text: #24262B;
+    --muted: #8C8F96;
+    --border: #ECEBE6;
+    --code-bg: #EFEEE9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    padding: 2rem 1rem 4rem;
+    text-align: start;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 2.25rem; }
+  h1 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+  }
+  header .meta {
+    color: var(--muted);
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .lead {
+    margin: 0 0 1.5rem;
+    font-size: 0.98rem;
+    color: var(--text);
+  }
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.1rem;
+    text-align: start;
+  }
+  h2 {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+    margin-bottom: 0.7rem;
+    line-height: 1.45;
+  }
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 1.1rem 0 0.5rem;
+    line-height: 1.4;
+  }
+  p { margin: 0.55rem 0; }
+  p:first-of-type { margin-top: 0; }
+  ul { padding-inline-start: 1.25rem; margin: 0.55rem 0; }
+  li { margin-bottom: 0.35rem; }
+  li:last-child { margin-bottom: 0; }
+  strong { font-weight: 700; }
+  code {
+    background: var(--code-bg);
+    border-radius: 5px;
+    padding: 0.1em 0.35em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.88em;
+    direction: ltr;
+    unicode-bidi: embed;
+    word-break: break-all;
+  }
+  .ltr { direction: ltr; unicode-bidi: embed; }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin-top: 2rem;
+    line-height: 1.7;
+  }
+  @media (max-width: 480px) {
+    body { padding: 1.5rem 0.85rem 3rem; }
+    section { padding: 1.2rem 1.1rem; border-radius: 14px; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.05rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Privatlivspolitik for Floatage</h1>
+  <p class="meta">Ikrafttrædelsesdato: 6. november 2026<br>Senest opdateret: 6. november 2026</p>
+</header>
+<p class="lead">Floatage ("Appen") er en lokal noteapp. Du skriver en post ned, så snart den falder dig ind, og tilføjer senere supplerende noter, så hver post vokser til sin egen tidslinje. Denne politik beskriver, hvad Appen faktisk gør med oplysninger, og hvordan de opbevares. Læs den, før du begynder at bruge Appen.</p>
+<section>
+  <h2>1. Hvad Appen gemmer</h2>
+  <p>Alt, hvad du skriver eller dikterer i Appen, gemmes på din enhed, herunder:</p>
+<ul><li>titlen og brødteksten i hver post (brødteksten bruges også til at generere listeoversigten);</li><li>supplerende noter, du tilføjer til en post, sammen med deres tidsstempler;</li><li>hver posts statusmarkering og om den er fastgjort;</li><li>oprettelses- og ændringstidspunkter for poster og supplerende noter.</li></ul>
+<p>Appen gemmer også en lokal sikkerhedskopi af de tidligere data, som bruges til at gendanne, hvis hoveddatafilen bliver beskadiget (se afsnit 2).</p>
+<p>Appen indsamler ikke din enhedsmodel, OS-version, enhedsidentifikatorer (IDFV eller IDFA), placering, kontakter, fotos, kamera, helbredsdata eller betalingsoplysninger, og den logger ikke din brugsadfærd eller dine navigationsveje. Taleinput producerer ingen lydfil og gemmer ingen optagelse: kun den genkendte tekst gemmes som en del af posten.</p>
+</section>
+<section>
+  <h2>2. Hvor dine oplysninger gemmes</h2>
+  <p>Poster opbevares som en JSON-fil i Appens egen sandkasse (Application Support/Floatage) sammen med en <code>.bak</code>-sikkerhedskopi. Når Appen gemmer, skriver den en midlertidig fil og erstatter derefter hovedfilen atomart for at mindske risikoen for beskadigelse, hvis en skrivning afbrydes; hvis hovedfilen ikke kan læses, forsøger Appen at gendanne fra sikkerhedskopien.</p>
+<p>Appen har ingen server. Den uploader, overfører eller synkroniserer ikke dette indhold til nogen cloudtjeneste eller tredjepart. Vi kan ikke se, læse eller gendanne dine poster.</p>
+</section>
+<section>
+  <h2>3. Netværksadgang, eksport og deling</h2>
+  <p>Appen foretager ingen netværksanmodninger og bruger ingen server. Den indeholder ingen netværkskode, og den byggede app linker ikke til Apples netværksframeworks, så dine poster bliver aldrig uploadet, overført eller synkroniseret nogen steder.</p>
+<p>Alle funktioner virker uden netværksforbindelse, herunder taleinput: talen genkendes på din enhed, og den genkendte tekst skrives kun til den lokale datafil. Taleinput kræver, at systemet har dikteringsressourcer til dit sprog, og at systemets diktering er slået til; hvis en af delene mangler, slås taleinput fra, og Appen viser en meddelelse om, at taleigenkendelse på enheden ikke er tilgængelig i øjeblikket, og foreslår at tjekke systemets dikteringsindstillinger eller bruge tastaturet. Du kan derefter fortsætte med at skrive, og Appen skifter aldrig til en genkendelsesmetode, der kræver netværksforbindelse.</p>
+<p>Den nuværende version har ingen eksport- eller delingsfunktion og sender ikke indhold videre til andre apps via iOS' systemdelingsark. Hvis en fremtidig version tilføjer en sådan funktion, forklarer vi den, før den tages i brug, og opdaterer denne politik.</p>
+<p>Om en iOS-enhedssikkerhedskopi (iCloud eller sikkerhedskopi på computer) omfatter postfilerne i Appens sandkasse, afhænger af dine systemindstillinger for sikkerhedskopiering. Sikkerhedskopien udføres af en systemfunktion fra Apple og har intet med Appen at gøre.</p>
+</section>
+<section>
+  <h2>4. Systemtilladelser og enhedsadgang</h2>
+  <p>Taleinput er den eneste funktion, der kræver tilladelse. Første gang du trykker på knappen til taleinput, spørger iOS, om Appen må bruge mikrofonen; afhængigt af hvilken system-API Appen bruger, kan iOS på det tidspunkt også vise en anmodning om tilladelse til taleigenkendelse. Appen anmoder ikke om notifikationer, fotobibliotek, kamera, placering, kontakter eller helbredsdata og tilgår dem ikke.</p>
+<h3>Mikrofon og taleinput</h3>
+<ul><li>Hvad den bruges til: Appen omdanner det, du siger, til teksten i en post, som du kan redigere, før du gemmer. Den genkendte tekst skrives kun til Appens lokale datafil (cards.json); der oprettes intet andet.</li><li>Hvornår der anmodes om det: Kun første gang du bruger taleinput. Appen åbner ikke mikrofonen ved start eller i baggrunden, og optagelsen stopper, så snart du er færdig med at diktere, forlader editoren eller lukker Appen.</li><li>Lyd hverken gemmes eller sendes: Appen opretter ingen lydfil og gemmer ingen optagelse. Taleinput bruger systemets taleigenkendelse på enheden, så lyden behandles kun på din enhed – den uploades ikke til Apples servere eller til os, og den genkendte tekst forbliver i den lokale datafil på din enhed. Det kræver, at dikteringsressourcer til dit sprog er til stede, og at systemets diktering er slået til; hvis ikke, slås taleinput fra, og Appen viser en meddelelse om, at taleigenkendelse på enheden ikke er tilgængelig i øjeblikket, og foreslår at tjekke systemets dikteringsindstillinger eller bruge tastaturet. Appen falder aldrig tilbage til en genkendelsesmetode, der kræver netværksforbindelse.</li><li>Hvis du afviser: Alle andre funktioner forbliver tilgængelige, og du kan fortsætte med at tilføje og redigere poster ved at skrive. Du kan give tilladelsen senere i iOS Indstillinger eller tilbagekalde den til enhver tid; derefter holder taleinput op med at virke.</li></ul>
+<p>Hvis en fremtidig version introducerer en funktion, der kræver en anden tilladelse, viser vi den standardmæssige iOS-anmodning, før funktionen tages i brug første gang, forklarer formålet og opdaterer denne politik på denne side. Du kan til enhver tid tilbagekalde en tilladelse i iOS Indstillinger; den pågældende funktion er derefter muligvis ikke tilgængelig.</p>
+</section>
+<section>
+  <h2>5. Opbevaring og sletning</h2>
+  <ul><li>Poster bliver på din enhed, indtil du sletter dem.</li><li>Du kan slette en hel post i Appen eller slette en enkelt supplerende note i en post.</li><li>Hvis du sletter Appen fra din iPhone, slettes hoveddatafilen og sikkerhedskopifilen i Appens sandkasse også.</li><li>Sletning kan ikke fortrydes. Da data kun findes på din enhed, og Appen ikke har nogen eksportfunktion, kan vi ikke gendanne dem for dig; slet derfor med omtanke.</li></ul>
+</section>
+<section>
+  <h2>6. Tredjeparts-SDK'er, analyse og reklamer</h2>
+  <p>Appen indeholder ingen tredjeparts-SDK'er overhovedet – hverken til analyse, reklamer, attribuering eller crashrapportering. Den indeholder ingen reklamer, sporer dig ikke på tværs af apps eller websites, bruger ikke IDFA og anmoder ikke om tilladelse via App Tracking Transparency. Om systemdiagnostik og crashlogs sendes til Apple, styres af dit valg under iOS Indstillinger &gt; Privatliv og sikkerhed &gt; Analyse og forbedringer; det har intet med Appen at gøre.</p>
+</section>
+<section>
+  <h2>7. Børns privatliv</h2>
+  <p>Appen er ikke designet til børn og indsamler ikke personoplysninger fra nogen. Da alle poster forbliver i lokal lagring på enheden, får vi aldrig adgang til, gemmer eller deler noget, et barn skriver. Hvis du er forælder eller værge og mener, at der er et problem, bedes du kontakte os via oplysningerne nedenfor.</p>
+</section>
+<section>
+  <h2>8. Ændringer af denne politik</h2>
+  <p>Når denne politik ændres, opdaterer vi datoen "Senest opdateret" øverst på denne side. Hvis en ændring påvirker, hvordan dine oplysninger håndteres, vil vi gøre opmærksom på det i Appen eller i udgivelsesnoterne på App Store. Hvis du fortsætter med at bruge Appen, efter en ændring er trådt i kraft, accepterer du den opdaterede politik.</p>
+</section>
+<section>
+  <h2>9. Kontakt os</h2>
+  <p>Hvis du har spørgsmål til denne politik, eller ønsker at udøve rettigheder vedrørende dine data, kan du kontakte os:</p>
+<ul><li>Kontakt-e-mail: <span class="ltr">yufei.cjn@outlook.com</span></li></ul>
+</section>
+<footer>
+  Floatage
+</footer>
+</main>
+</body>
+</html>

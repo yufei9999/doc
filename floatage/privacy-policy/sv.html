@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0">
+<title>Integritetspolicy för Floatage</title>
+<meta name="description" content="Integritetspolicy för Floatage">
+<style>
+  :root {
+    --accent: #00704A;
+    --accent-dark: #00553A;
+    --bg: #F6F5F1;
+    --card: #FFFFFF;
+    --text: #24262B;
+    --muted: #8C8F96;
+    --border: #ECEBE6;
+    --code-bg: #EFEEE9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    padding: 2rem 1rem 4rem;
+    text-align: start;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 2.25rem; }
+  h1 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+  }
+  header .meta {
+    color: var(--muted);
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .lead {
+    margin: 0 0 1.5rem;
+    font-size: 0.98rem;
+    color: var(--text);
+  }
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.1rem;
+    text-align: start;
+  }
+  h2 {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+    margin-bottom: 0.7rem;
+    line-height: 1.45;
+  }
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 1.1rem 0 0.5rem;
+    line-height: 1.4;
+  }
+  p { margin: 0.55rem 0; }
+  p:first-of-type { margin-top: 0; }
+  ul { padding-inline-start: 1.25rem; margin: 0.55rem 0; }
+  li { margin-bottom: 0.35rem; }
+  li:last-child { margin-bottom: 0; }
+  strong { font-weight: 700; }
+  code {
+    background: var(--code-bg);
+    border-radius: 5px;
+    padding: 0.1em 0.35em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.88em;
+    direction: ltr;
+    unicode-bidi: embed;
+    word-break: break-all;
+  }
+  .ltr { direction: ltr; unicode-bidi: embed; }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin-top: 2rem;
+    line-height: 1.7;
+  }
+  @media (max-width: 480px) {
+    body { padding: 1.5rem 0.85rem 3rem; }
+    section { padding: 1.2rem 1.1rem; border-radius: 14px; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.05rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Integritetspolicy för Floatage</h1>
+  <p class="meta">Ikraftträdande: 6 november 2026<br>Senast uppdaterad: 6 november 2026</p>
+</header>
+<p class="lead">Floatage (”Appen”) är en lokal anteckningsapp. Du skriver ner något när det dyker upp och lägger sedan till anteckningar i efterhand, så att varje post byggs upp till en egen tidslinje. Den här policyn beskriver vad Appen faktiskt gör med information och hur informationen förvaras. Läs den innan du börjar använda Appen.</p>
+<section>
+  <h2>1. Vad Appen lagrar</h2>
+  <p>Allt du skriver eller dikterar in i Appen sparas på din enhet, bland annat:</p>
+<ul><li>rubriken och brödtexten i varje post (brödtexten används även för att skapa listöversikten);</li><li>de anteckningar du lägger till i en post, tillsammans med deras tidsstämplar;</li><li>statusflaggan för varje post och om den är fäst;</li><li>när poster och anteckningar skapades och ändrades.</li></ul>
+<p>Appen sparar också en lokal säkerhetskopia av föregående data, som används för att återställa om huvuddatafilen skulle bli skadad (se avsnitt 2).</p>
+<p>Appen samlar inte in din enhetsmodell, OS-version, enhetsidentifierare (IDFV eller IDFA), plats, kontakter, foton, kamera, hälsodata eller betalningsinformation, och den loggar inte ditt användningsbeteende eller dina navigeringsvägar. Röstinmatning skapar ingen ljudfil och behåller ingen inspelning: endast den igenkända texten sparas, som en del av posten.</p>
+</section>
+<section>
+  <h2>2. Var din information lagras</h2>
+  <p>Poster lagras som en JSON-fil i Appens egen sandlåda (Application Support/Floatage), tillsammans med en säkerhetskopia med filändelsen <code>.bak</code>. När Appen sparar skriver den en tillfällig fil och ersätter sedan huvudfilen atomiskt, för att minska risken för skador om en skrivning avbryts; om huvudfilen inte kan läsas försöker Appen återställa den från säkerhetskopian.</p>
+<p>Appen har ingen server. Den laddar inte upp, överför inte och synkroniserar inte detta innehåll till någon molntjänst eller tredje part. Vi kan inte se, läsa eller återställa dina poster.</p>
+</section>
+<section>
+  <h2>3. Nätverksåtkomst, export och delning</h2>
+  <p>Appen gör inga nätverksanrop och använder ingen server. Den innehåller ingen nätverkskod, och den byggda appen länkar inte mot Apples nätverksramverk, så dina poster laddas aldrig upp, överförs eller synkroniseras någonstans.</p>
+<p>Alla funktioner fungerar utan nätverksanslutning, även röstinmatning: talet känns igen på din enhet och den igenkända texten skrivs endast till den lokala datafilen. Röstinmatning kräver att systemet har dikteringsresurser för ditt språk och att systemets diktering är aktiverad; om något av detta saknas stängs röstinmatning av och Appen visar ett meddelande om att röstigenkänning på enheten inte är tillgänglig just nu och föreslår att du kontrollerar systemets dikteringsinställningar eller använder tangentbordet. Du kan sedan fortsätta skriva, och Appen byter aldrig till en igenkänningsmetod som kräver nätverksanslutning.</p>
+<p>Den nuvarande versionen har ingen funktion för export eller delning och överför inte innehåll till andra appar via iOS delningsmeny. Om en framtida version lägger till en sådan funktion förklarar vi den innan den används och uppdaterar den här policyn.</p>
+<p>Om en säkerhetskopia i iOS (iCloud eller säkerhetskopia till dator) omfattar postfilerna i Appens sandlåda beror på dina inställningar för systemsäkerhetskopiering. Säkerhetskopieringen utförs av en systemfunktion i Apple och har inget med Appen att göra.</p>
+</section>
+<section>
+  <h2>4. Systembehörigheter och enhetsåtkomst</h2>
+  <p>Röstinmatning är den enda funktionen som kräver behörighet. Första gången du trycker på knappen för röstinmatning frågar iOS om Appen får använda mikrofonen; beroende på vilket system-API Appen använder kan iOS även visa en förfrågan om behörighet för röstigenkänning då. Appen begär inte behörighet för aviseringar, fotobibliotek, kamera, plats, kontakter eller hälsodata och kommer inte åt dem.</p>
+<h3>Mikrofon och röstinmatning</h3>
+<ul><li>Vad den används till: Appen omvandlar det du säger till text i en post, som du kan redigera innan du sparar. Den igenkända texten skrivs endast till Appens lokala datafil (cards.json); inget annat skapas.</li><li>När den begärs: endast första gången du använder röstinmatning. Appen öppnar inte mikrofonen vid start eller i bakgrunden, och inspelningen stoppas så snart du slutar diktera, lämnar redigeraren eller stänger Appen.</li><li>Ljud lagras inte och skickas inte: Appen skapar ingen ljudfil och behåller ingen inspelning. Röstinmatning använder systemets röstigenkänning på enheten, så ljudet bearbetas endast på din enhet – det laddas inte upp till Apples servrar eller till oss, och den igenkända texten stannar i den lokala datafilen på din enhet. Detta kräver att dikteringsresurser för ditt språk finns och att systemets diktering är aktiverad; om de inte är det stängs röstinmatning av och Appen visar ett meddelande om att röstigenkänning på enheten inte är tillgänglig just nu och föreslår att du kontrollerar systemets dikteringsinställningar eller använder tangentbordet. Den faller aldrig tillbaka på en igenkänningsmetod som kräver nätverksanslutning.</li><li>Om du avböjer: alla andra funktioner är fortfarande tillgängliga, och du kan fortsätta lägga till och redigera poster genom att skriva. Du kan tillåta behörigheten senare i iOS-inställningarna eller återkalla den när som helst; röstinmatning slutar då att fungera.</li></ul>
+<p>Om en framtida version introducerar en funktion som kräver ytterligare behörighet visar vi den vanliga iOS-förfrågan innan funktionen används första gången, förklarar syftet med den och uppdaterar den här policyn på den här sidan. Du kan när som helst återkalla en behörighet i iOS-inställningarna; den berörda funktionen kan då vara otillgänglig.</p>
+</section>
+<section>
+  <h2>5. Lagring och radering</h2>
+  <ul><li>Poster finns kvar på din enhet tills du raderar dem.</li><li>Du kan radera en hel post i Appen, eller radera en enskild anteckning i en post.</li><li>Om du raderar Appen från din iPhone raderas även huvuddatafilen och säkerhetskopian i Appens sandlåda.</li><li>Raderade data går inte att återställa. Eftersom uppgifterna endast finns på din enhet och Appen inte har någon exportfunktion kan vi inte återställa dem åt dig; radera med omsorg.</li></ul>
+</section>
+<section>
+  <h2>6. Tredjeparts-SDK:er, analys och annonsering</h2>
+  <p>Appen innehåller inga tredjeparts-SDK:er av något slag – inga SDK:er för analys, annonsering, attribuering eller kraschrapportering. Den innehåller inga annonser, spårar dig inte mellan appar eller webbplatser, använder inte IDFA och begär inte behörighet för App Tracking Transparency. Om systemdiagnostik och kraschloggar skickas till Apple styrs det av ditt val under iOS-inställningar &gt; Integritet och säkerhet &gt; Analys och förbättringar; det har inget med Appen att göra.</p>
+</section>
+<section>
+  <h2>7. Barns integritet</h2>
+  <p>Appen är inte utformad för barn och samlar inte in personuppgifter från någon. Eftersom alla poster ligger i lokal lagring på enheten får, lagrar eller delar vi aldrig något som ett barn skriver. Om du är förälder eller vårdnadshavare och tror att det finns ett problem, kontakta oss med uppgifterna nedan.</p>
+</section>
+<section>
+  <h2>8. Ändringar av den här policyn</h2>
+  <p>När den här policyn ändras uppdaterar vi datumet ”Senast uppdaterad” högst upp på sidan. Om en ändring påverkar hur din information hanteras markerar vi det i Appen eller i versionsinformationen på App Store. Om du fortsätter använda Appen efter att en ändring har trätt i kraft innebär det att du godkänner den uppdaterade policyn.</p>
+</section>
+<section>
+  <h2>9. Kontakta oss</h2>
+  <p>Om du har frågor om den här policyn, eller vill utöva någon rättighet som rör dina uppgifter, kontakta oss:</p>
+<ul><li>Kontakt-e-post: <span class="ltr">yufei.cjn@outlook.com</span></li></ul>
+</section>
+<footer>
+  Floatage
+</footer>
+</main>
+</body>
+</html>

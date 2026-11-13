@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0">
+<title>Informativa sulla privacy di Floatage</title>
+<meta name="description" content="Informativa sulla privacy di Floatage">
+<style>
+  :root {
+    --accent: #00704A;
+    --accent-dark: #00553A;
+    --bg: #F6F5F1;
+    --card: #FFFFFF;
+    --text: #24262B;
+    --muted: #8C8F96;
+    --border: #ECEBE6;
+    --code-bg: #EFEEE9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    padding: 2rem 1rem 4rem;
+    text-align: start;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 2.25rem; }
+  h1 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+  }
+  header .meta {
+    color: var(--muted);
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .lead {
+    margin: 0 0 1.5rem;
+    font-size: 0.98rem;
+    color: var(--text);
+  }
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.1rem;
+    text-align: start;
+  }
+  h2 {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+    margin-bottom: 0.7rem;
+    line-height: 1.45;
+  }
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 1.1rem 0 0.5rem;
+    line-height: 1.4;
+  }
+  p { margin: 0.55rem 0; }
+  p:first-of-type { margin-top: 0; }
+  ul { padding-inline-start: 1.25rem; margin: 0.55rem 0; }
+  li { margin-bottom: 0.35rem; }
+  li:last-child { margin-bottom: 0; }
+  strong { font-weight: 700; }
+  code {
+    background: var(--code-bg);
+    border-radius: 5px;
+    padding: 0.1em 0.35em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.88em;
+    direction: ltr;
+    unicode-bidi: embed;
+    word-break: break-all;
+  }
+  .ltr { direction: ltr; unicode-bidi: embed; }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin-top: 2rem;
+    line-height: 1.7;
+  }
+  @media (max-width: 480px) {
+    body { padding: 1.5rem 0.85rem 3rem; }
+    section { padding: 1.2rem 1.1rem; border-radius: 14px; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.05rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Informativa sulla privacy di Floatage</h1>
+  <p class="meta">Data di entrata in vigore: 6 novembre 2026<br>Ultimo aggiornamento: 6 novembre 2026</p>
+</header>
+<p class="lead">Floatage ("l'App") è un'app locale per prendere appunti. Annoti un elemento non appena ti viene in mente, poi vi aggiungi delle note in un secondo momento, così ogni elemento diventa una cronologia a sé. La presente informativa descrive ciò che l'App fa realmente con le informazioni e come queste vengono conservate. Ti invitiamo a leggerla prima di iniziare a usare l'App.</p>
+<section>
+  <h2>1. Cosa memorizza l'App</h2>
+  <p>Qualunque cosa tu digiti o detti nell'App viene salvata sul tuo dispositivo, compresi:</p>
+<ul><li>il titolo e il corpo di ogni record (il corpo serve anche a generare il riepilogo dell'elenco);</li><li>le note aggiuntive che aggiungi a un record, insieme alle relative date e ore;</li><li>l'indicatore di stato di ogni record e se è bloccato in alto;</li><li>la data e l'ora di creazione e di modifica dei record e delle note aggiuntive.</li></ul>
+<p>L'App conserva inoltre una copia di backup locale dei dati precedenti, usata per il ripristino se il file di dati principale è danneggiato (vedi la sezione 2).</p>
+<p>L'App non raccoglie il modello del tuo dispositivo, la versione del sistema operativo, gli identificatori del dispositivo (IDFV o IDFA), la posizione, i contatti, le foto, la fotocamera, i dati sanitari o le informazioni di pagamento e non registra le tue abitudini d'uso né i percorsi di navigazione. L'inserimento vocale non produce alcun file audio e non conserva alcuna registrazione: viene salvato solo il testo riconosciuto, come parte del record.</p>
+</section>
+<section>
+  <h2>2. Dove vengono conservate le tue informazioni</h2>
+  <p>I record sono conservati in un file JSON all'interno della sandbox dell'App (Application Support/Floatage), insieme a una copia di backup <code>.bak</code>. Al momento del salvataggio l'App scrive un file temporaneo e poi sostituisce il file principale in modo atomico, per ridurre il rischio di danneggiamento se una scrittura viene interrotta; se il file principale non è leggibile, l'App prova a ripristinarlo dal backup.</p>
+<p>L'App non ha un server. Non carica, non trasmette e non sincronizza questi contenuti su alcun servizio cloud o a terze parti. Non possiamo vedere, leggere o ripristinare i tuoi record.</p>
+</section>
+<section>
+  <h2>3. Accesso alla rete, esportazione e condivisione</h2>
+  <p>L'App non effettua richieste di rete e non utilizza alcun server. Non contiene codice di rete e l'app compilata non si collega ai framework di rete di Apple, quindi i tuoi record non vengono mai caricati, trasmessi o sincronizzati da nessuna parte.</p>
+<p>Tutte le funzioni lavorano senza connessione di rete, compreso l'inserimento vocale: il parlato viene riconosciuto sul tuo dispositivo e il testo riconosciuto viene scritto solo nel file di dati locale. L'inserimento vocale richiede che il sistema disponga delle risorse di dettatura per la tua lingua e che la dettatura di sistema sia attiva; se manca una delle due, l'inserimento vocale viene disattivato e l'App mostra un avviso che il riconoscimento vocale sul dispositivo non è al momento disponibile e suggerisce di controllare le impostazioni di dettatura del sistema o di usare la tastiera. Puoi quindi continuare a scrivere, e l'App non passa mai a un metodo di riconoscimento che richieda una connessione di rete.</p>
+<p>La versione attuale non ha funzioni di esportazione o condivisione e non trasmette contenuti ad altre app tramite il pannello di condivisione di iOS. Se una versione futura ne aggiungerà una, la spiegheremo prima dell'uso e aggiorneremo la presente informativa.</p>
+<p>Che un backup di un dispositivo iOS (iCloud o backup su computer) includa i file dei record nella sandbox dell'App dipende dalle impostazioni di backup del tuo sistema. Quel backup viene eseguito da una funzione di sistema di Apple ed è indipendente dall'App.</p>
+</section>
+<section>
+  <h2>4. Autorizzazioni di sistema e accesso al dispositivo</h2>
+  <p>L'inserimento vocale è l'unica funzione che richiede un'autorizzazione. La prima volta che tocchi il pulsante di inserimento vocale, iOS chiede se l'App può usare il microfono; a seconda dell'API di sistema usata dall'App, iOS potrebbe anche mostrare in quel momento una richiesta di autorizzazione per il riconoscimento vocale. L'App non richiede né utilizza l'accesso a notifiche, libreria foto, fotocamera, posizione, contatti o dati sanitari.</p>
+<h3>Microfono e inserimento vocale</h3>
+<ul><li>A cosa serve: l'App trasforma ciò che dici nel testo di un record, che puoi modificare prima di salvare. Il testo riconosciuto viene scritto solo nel file di dati locale dell'App (cards.json); non viene creato nient'altro.</li><li>Quando viene richiesta: solo la prima volta che usi l'inserimento vocale. L'App non apre il microfono all'avvio né in background, e la registrazione si interrompe appena finisci di dettare, esci dall'editor o chiudi l'App.</li><li>L'audio non viene né conservato né inviato: l'App non crea alcun file audio e non conserva alcuna registrazione. L'inserimento vocale usa il riconoscimento vocale sul dispositivo del sistema, quindi l'audio viene elaborato solo sul tuo dispositivo: non viene caricato sui server di Apple né inviato a noi, e il testo riconosciuto resta nel file di dati locale sul tuo dispositivo. Ciò richiede la presenza delle risorse di dettatura per la tua lingua e la dettatura di sistema attiva; in caso contrario l'inserimento vocale viene disattivato e l'App mostra un avviso che il riconoscimento vocale sul dispositivo non è al momento disponibile e suggerisce di controllare le impostazioni di dettatura del sistema o di usare la tastiera. Non passa mai a un metodo di riconoscimento che richieda una connessione di rete.</li><li>Se rifiuti: tutte le altre funzioni restano disponibili e puoi continuare ad aggiungere e modificare record scrivendo. Puoi concedere l'autorizzazione in seguito nelle Impostazioni di iOS oppure revocarla in qualsiasi momento; l'inserimento vocale smetterà allora di funzionare.</li></ul>
+<p>Se una versione futura introdurrà una funzione che richiede un'altra autorizzazione, mostreremo la richiesta standard di iOS prima del primo utilizzo di quella funzione, ne spiegheremo lo scopo e aggiorneremo la presente informativa su questa pagina. Puoi revocare qualsiasi autorizzazione in qualsiasi momento nelle Impostazioni di iOS; la funzione interessata potrebbe non essere più disponibile.</p>
+</section>
+<section>
+  <h2>5. Conservazione ed eliminazione</h2>
+  <ul><li>I record restano sul tuo dispositivo finché non li elimini.</li><li>Puoi eliminare un intero record nell'App oppure eliminare una singola nota aggiuntiva all'interno di un record.</li><li>Eliminando l'App dal tuo iPhone vengono eliminati anche il file di dati principale e il file di backup nella sandbox dell'App.</li><li>L'eliminazione non può essere annullata. Poiché i dati esistono solo sul tuo dispositivo e l'App non ha funzioni di esportazione, non possiamo ripristinarli per te; elimina con attenzione.</li></ul>
+</section>
+<section>
+  <h2>6. SDK di terze parti, analisi e pubblicità</h2>
+  <p>L'App non include SDK di terze parti di alcun tipo: nessun SDK di analisi, pubblicità, attribuzione o segnalazione di arresti anomali. Non contiene annunci pubblicitari, non ti traccia tra app o siti web, non usa l'IDFA e non richiede l'autorizzazione App Tracking Transparency. L'invio ad Apple delle diagnostiche a livello di sistema e dei log di arresto anomalo dipende dalla tua scelta in Impostazioni iOS &gt; Privacy e sicurezza &gt; Analisi e miglioramenti; ciò non ha alcun rapporto con l'App.</p>
+</section>
+<section>
+  <h2>7. Privacy dei minori</h2>
+  <p>L'App non è pensata per i minori e non raccoglie informazioni personali da nessuno. Poiché tutti i record restano nella memoria locale del dispositivo, non otteniamo, conserviamo né condividiamo mai ciò che scrive un minore. Se sei un genitore o un tutore e ritieni che ci sia un problema, contattaci usando i recapiti riportati di seguito.</p>
+</section>
+<section>
+  <h2>8. Modifiche alla presente informativa</h2>
+  <p>Quando la presente informativa cambia, aggiorneremo la data di "Ultimo aggiornamento" in cima a questa pagina. Se una modifica riguarda il modo in cui vengono gestite le tue informazioni, la segnaleremo nell'App o nelle note di rilascio sull'App Store. Continuare a usare l'App dopo l'entrata in vigore di una modifica significa accettare l'informativa aggiornata.</p>
+</section>
+<section>
+  <h2>9. Contattaci</h2>
+  <p>Se hai domande sulla presente informativa o desideri esercitare diritti relativi ai tuoi dati, contattaci:</p>
+<ul><li>Email di contatto: <span class="ltr">yufei.cjn@outlook.com</span></li></ul>
+</section>
+<footer>
+  Floatage
+</footer>
+</main>
+</body>
+</html>

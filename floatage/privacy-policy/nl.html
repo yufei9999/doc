@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0">
+<title>Privacybeleid voor Floatage</title>
+<meta name="description" content="Privacybeleid voor Floatage">
+<style>
+  :root {
+    --accent: #00704A;
+    --accent-dark: #00553A;
+    --bg: #F6F5F1;
+    --card: #FFFFFF;
+    --text: #24262B;
+    --muted: #8C8F96;
+    --border: #ECEBE6;
+    --code-bg: #EFEEE9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    padding: 2rem 1rem 4rem;
+    text-align: start;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 2.25rem; }
+  h1 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+  }
+  header .meta {
+    color: var(--muted);
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .lead {
+    margin: 0 0 1.5rem;
+    font-size: 0.98rem;
+    color: var(--text);
+  }
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.1rem;
+    text-align: start;
+  }
+  h2 {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+    margin-bottom: 0.7rem;
+    line-height: 1.45;
+  }
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 1.1rem 0 0.5rem;
+    line-height: 1.4;
+  }
+  p { margin: 0.55rem 0; }
+  p:first-of-type { margin-top: 0; }
+  ul { padding-inline-start: 1.25rem; margin: 0.55rem 0; }
+  li { margin-bottom: 0.35rem; }
+  li:last-child { margin-bottom: 0; }
+  strong { font-weight: 700; }
+  code {
+    background: var(--code-bg);
+    border-radius: 5px;
+    padding: 0.1em 0.35em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.88em;
+    direction: ltr;
+    unicode-bidi: embed;
+    word-break: break-all;
+  }
+  .ltr { direction: ltr; unicode-bidi: embed; }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin-top: 2rem;
+    line-height: 1.7;
+  }
+  @media (max-width: 480px) {
+    body { padding: 1.5rem 0.85rem 3rem; }
+    section { padding: 1.2rem 1.1rem; border-radius: 14px; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.05rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Privacybeleid voor Floatage</h1>
+  <p class="meta">Ingangsdatum: 6 november 2026<br>Laatst bijgewerkt: 6 november 2026</p>
+</header>
+<p class="lead">Floatage (‘de App’) is een lokale app om notities te maken. Je schrijft iets op zodra het in je opkomt en voegt er later aanvullende notities aan toe, zodat elk item uitgroeit tot een eigen tijdlijn. Dit beleid beschrijft wat de App daadwerkelijk met informatie doet en hoe die informatie wordt bewaard. Lees het voordat je de App gaat gebruiken.</p>
+<section>
+  <h2>1. Wat de App opslaat</h2>
+  <p>Alles wat je in de App typt of dicteert, wordt op je apparaat opgeslagen, waaronder:</p>
+<ul><li>de titel en inhoud van elke kaart (de inhoud wordt ook gebruikt om de samenvatting in de lijst te maken);</li><li>aanvullende notities die je aan een kaart toevoegt, samen met hun tijdstempels;</li><li>de statusmarkering van elke kaart en of deze is vastgezet;</li><li>de aanmaak- en wijzigingstijden van kaarten en aanvullende notities.</li></ul>
+<p>De App bewaart ook één lokale back-upkopie van de vorige gegevens, die wordt gebruikt om te herstellen als het hoofdgegevensbestand beschadigd is (zie sectie 2).</p>
+<p>De App verzamelt geen apparaatmodel, OS-versie, apparaat-ID's (IDFV of IDFA), locatiegegevens, contacten, foto's, cameragegevens, gezondheidsgegevens of betaalgegevens, en legt je gebruiksgedrag of navigatiepaden niet vast. Spraakinvoer levert geen audiobestand op en bewaart geen opname: alleen de herkende tekst wordt opgeslagen, als onderdeel van de kaart.</p>
+</section>
+<section>
+  <h2>2. Waar je informatie wordt opgeslagen</h2>
+  <p>Kaarten worden bewaard als een JSON-bestand in de eigen sandbox van de App (Application Support/Floatage), naast een back-upkopie met de extensie <code>.bak</code>. Bij het opslaan schrijft de App een tijdelijk bestand en vervangt daarna het hoofdgegevensbestand atomair, om het risico op beschadiging te verkleinen als een schrijfactie wordt onderbroken; als het hoofdgegevensbestand niet kan worden gelezen, probeert de App te herstellen uit de back-up.</p>
+<p>De App heeft geen server. De App uploadt, verzendt of synchroniseert deze inhoud niet naar een clouddienst of derde partij. Wij kunnen je kaarten niet inzien, lezen of herstellen.</p>
+</section>
+<section>
+  <h2>3. Netwerktoegang, exporteren en delen</h2>
+  <p>De App doet geen netwerkverzoeken en gebruikt geen server. De App bevat geen netwerkcode en de gebouwde app wordt niet gekoppeld aan de netwerkframeworks van Apple, zodat je kaarten nooit ergens worden geüpload, verzonden of gesynchroniseerd.</p>
+<p>Alle functies werken zonder netwerkverbinding, inclusief spraakinvoer: spraak wordt op je apparaat herkend en de herkende tekst wordt uitsluitend naar het lokale gegevensbestand geschreven. Spraakinvoer vereist dat het systeem dicteerbronnen voor jouw taal heeft en dat dicteren in het systeem is ingeschakeld; ontbreekt een van beide, dan wordt spraakinvoer uitgeschakeld en toont de App een melding dat spraakherkenning op het apparaat momenteel niet beschikbaar is, met de suggestie om de dicteerinstellingen van het systeem te controleren of het toetsenbord te gebruiken. Je kunt daarna blijven typen en de App schakelt nooit over op een herkenningsmethode die een netwerkverbinding nodig heeft.</p>
+<p>De huidige versie heeft geen export- of deelfunctie en geeft geen inhoud door aan andere apps via het deelmenu van iOS. Als een toekomstige versie er een toevoegt, leggen we die uit vóór gebruik en werken we dit beleid bij.</p>
+<p>Of een back-up van een iOS-apparaat (iCloud of back-up op een computer) de kaartbestanden in de sandbox van de App bevat, hangt af van je back-upinstellingen in het systeem. Die back-up wordt uitgevoerd door een systeemfunctie van Apple en staat los van de App.</p>
+</section>
+<section>
+  <h2>4. Systeemrechten en toegang tot het apparaat</h2>
+  <p>Spraakinvoer is de enige functie waarvoor toestemming nodig is. De eerste keer dat je op de knop voor spraakinvoer tikt, vraagt iOS of de App de microfoon mag gebruiken; afhankelijk van de systeem-API die de App gebruikt, kan iOS op dat moment ook een verzoek om toestemming voor spraakherkenning tonen. De App vraagt geen toestemming voor meldingen, fotobibliotheek, camera, locatie, contacten of gezondheidsgegevens en heeft daar ook geen toegang toe.</p>
+<h3>Microfoon en spraakinvoer</h3>
+<ul><li>Waarvoor het dient: de App zet wat je zegt om in de tekst van een kaart, die je vóór het opslaan kunt bewerken. De herkende tekst wordt uitsluitend naar het lokale gegevensbestand van de App (cards.json) geschreven; er wordt niets anders aangemaakt.</li><li>Wanneer erom wordt gevraagd: alleen de eerste keer dat je spraakinvoer gebruikt. De App opent de microfoon niet bij het starten of op de achtergrond, en de opname stopt zodra je klaar bent met dicteren, de editor verlaat of de App sluit.</li><li>Audio wordt niet opgeslagen en niet verzonden: de App maakt geen audiobestand aan en bewaart geen opname. Spraakinvoer gebruikt de spraakherkenning op het apparaat van het systeem, zodat de audio alleen op je apparaat wordt verwerkt — de audio wordt niet naar de servers van Apple of naar ons geüpload, en de herkende tekst blijft in het lokale gegevensbestand op je apparaat. Hiervoor moeten dicteerbronnen voor jouw taal aanwezig zijn en moet dicteren in het systeem zijn ingeschakeld; is dat niet het geval, dan wordt spraakinvoer uitgeschakeld en toont de App een melding dat spraakherkenning op het apparaat momenteel niet beschikbaar is, met de suggestie om de dicteerinstellingen van het systeem te controleren of het toetsenbord te gebruiken. De App valt nooit terug op een herkenningsmethode die een netwerkverbinding nodig heeft.</li><li>Als je weigert: alle andere functies blijven beschikbaar en je kunt kaarten blijven toevoegen en bewerken door te typen. Je kunt de toestemming later in de iOS-instellingen geven of op elk moment intrekken; spraakinvoer werkt daarna niet meer.</li></ul>
+<p>Als een toekomstige versie een functie introduceert waarvoor een andere toestemming nodig is, tonen we het standaard iOS-verzoek voordat die functie voor het eerst wordt gebruikt, leggen we het doel ervan uit en werken we dit beleid op deze pagina bij. Je kunt een toestemming op elk moment intrekken in de iOS-instellingen; de bijbehorende functie is dan mogelijk niet beschikbaar.</p>
+</section>
+<section>
+  <h2>5. Bewaring en verwijdering</h2>
+  <ul><li>Kaarten blijven op je apparaat staan tot je ze verwijdert.</li><li>Je kunt een hele kaart in de App verwijderen of een afzonderlijke aanvullende notitie binnen een kaart verwijderen.</li><li>Als je de App van je iPhone verwijdert, worden ook het hoofdgegevensbestand en het back-upbestand in de sandbox van de App verwijderd.</li><li>Verwijderen kan niet ongedaan worden gemaakt. Omdat de gegevens alleen op je apparaat staan en de App geen exportfunctie heeft, kunnen wij ze niet voor je herstellen; wees daarom voorzichtig bij het verwijderen.</li></ul>
+</section>
+<section>
+  <h2>6. SDK's, analyse en advertenties van derden</h2>
+  <p>De App bevat geen SDK's van derden van welke aard dan ook — geen SDK's voor analyse, advertenties, attributie of crashrapportage. De App bevat geen advertenties, volgt je niet over apps of websites heen, gebruikt geen IDFA en vraagt geen toestemming aan voor App Tracking Transparency. Of diagnostische gegevens en crashlogs op systeemniveau naar Apple worden verzonden, bepaal je zelf in iOS-instellingen &gt; Privacy en beveiliging &gt; Analyse en verbeteringen; dat staat los van de App.</p>
+</section>
+<section>
+  <h2>7. Privacy van kinderen</h2>
+  <p>De App is niet ontworpen voor kinderen en verzamelt van niemand persoonsgegevens. Omdat alle kaarten in de lokale opslag op het apparaat blijven, krijgen wij nooit iets wat een kind schrijft in handen, slaan we het niet op en delen we het niet. Ben je ouder of voogd en denk je dat er een probleem is, neem dan contact met ons op via de onderstaande gegevens.</p>
+</section>
+<section>
+  <h2>8. Wijzigingen in dit beleid</h2>
+  <p>Wanneer dit beleid verandert, werken we de datum ‘Laatst bijgewerkt’ bovenaan deze pagina bij. Als een wijziging gevolgen heeft voor hoe je informatie wordt verwerkt, melden we dat in de App of in de releaseopmerkingen in de App Store. Als je de App blijft gebruiken nadat een wijziging van kracht is geworden, accepteer je het bijgewerkte beleid.</p>
+</section>
+<section>
+  <h2>9. Contact</h2>
+  <p>Heb je vragen over dit beleid of wil je rechten uitoefenen met betrekking tot je gegevens, neem dan contact met ons op:</p>
+<ul><li>E-mailadres voor contact: <span class="ltr">yufei.cjn@outlook.com</span></li></ul>
+</section>
+<footer>
+  Floatage
+</footer>
+</main>
+</body>
+</html>

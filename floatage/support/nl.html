@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0">
+<title>Floatage – Ondersteuning</title>
+<meta name="description" content="Ondersteuning voor Floatage: contact, privacybeleid en veelgestelde vragen.">
+<style>
+  :root {
+    --accent: #00704A;
+    --accent-dark: #00553A;
+    --bg: #F6F5F1;
+    --card: #FFFFFF;
+    --text: #24262B;
+    --muted: #8C8F96;
+    --border: #ECEBE6;
+    --code-bg: #EFEEE9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    padding: 2rem 1rem 4rem;
+    text-align: start;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 1.6rem; }
+  h1 { font-size: 1.9rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.3; }
+  header .meta { color: var(--muted); margin-top: 0.5rem; font-size: 0.95rem; }
+  .lang-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.45rem; margin-top: 1rem; }
+  .lang-nav a {
+    display: inline-block; padding: 0.3rem 0.75rem; border-radius: 999px;
+    border: 1px solid var(--border); background: var(--card);
+    color: var(--accent-dark); font-size: 0.82rem; font-weight: 600; text-decoration: none;
+  }
+  .lang-nav a[aria-current="page"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  section {
+    background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+    padding: 1.5rem 1.75rem; margin-bottom: 1.1rem; text-align: start;
+  }
+  h2 { font-size: 1.12rem; font-weight: 700; color: var(--accent-dark); margin-bottom: 0.7rem; line-height: 1.45; }
+  h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin: 1.15rem 0 0.35rem; line-height: 1.45; }
+  h3:first-of-type { margin-top: 0.4rem; }
+  p { margin: 0.55rem 0; }
+  p:first-of-type { margin-top: 0; }
+  ul { padding-inline-start: 1.25rem; margin: 0.55rem 0; }
+  li { margin-bottom: 0.35rem; }
+  li:last-child { margin-bottom: 0; }
+  a { color: var(--accent-dark); }
+  code {
+    background: var(--code-bg); border-radius: 5px; padding: 0.1em 0.35em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.88em; word-break: break-all;
+  }
+  .ltr { direction: ltr; unicode-bidi: embed; }
+  .contact-list { list-style: none; padding: 0; }
+  .contact-list li { margin-bottom: 0.5rem; }
+  .label { font-weight: 600; }
+  .lead { margin: 0 0 1.5rem; font-size: 0.98rem; }
+  footer { text-align: center; color: var(--muted); font-size: 0.82rem; margin-top: 2rem; line-height: 1.7; }
+  @media (max-width: 480px) {
+    body { padding: 1.5rem 0.85rem 3rem; }
+    section { padding: 1.2rem 1.1rem; border-radius: 14px; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.05rem; }
+    .lang-nav { gap: 0.35rem; }
+    .lang-nav a { padding: 0.26rem 0.6rem; font-size: 0.78rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Floatage – Ondersteuning</h1>
+  <p class="meta">Hulp, veelgestelde vragen en contact</p>
+  <nav class="lang-nav">
+    <a href="zh-Hans.html">简体中文</a>
+    <a href="zh-Hant.html">繁體中文</a>
+    <a href="en.html">English</a>
+    <a href="ja.html">日本語</a>
+    <a href="ko.html">한국어</a>
+    <a href="de.html">Deutsch</a>
+    <a href="fr.html">Français</a>
+    <a href="nl.html" aria-current="page">Nederlands</a>
+    <a href="sv.html">Svenska</a>
+    <a href="nb.html">Norsk</a>
+    <a href="da.html">Dansk</a>
+    <a href="it.html">Italiano</a>
+    <a href="es.html">Español</a>
+    <a href="pt.html">Português</a>
+    <a href="ar.html">العربية</a>
+  </nav>
+</header>
+
+<p class="lead">Floatage is een lichte ideeënkaarten-app die volledig lokaal werkt. Noteer een gedachte zodra die bij je opkomt, voeg later een vervolg toe, en elke kaart groeit uit tot een tijdlijn op zichzelf. Alles blijft op je apparaat: er is geen account, geen server achter de app, en de app werkt volledig offline.</p>
+
+<section>
+  <h2>Veelgestelde vragen</h2>
+  <h3>Waar worden mijn gegevens opgeslagen, en kunnen verwijderde gegevens worden hersteld?</h3>
+  <p>Kaarten worden uitsluitend opgeslagen in <code>cards.json</code> en de bijbehorende <code>.bak</code>-back-up in de sandbox van de app. Er wordt niets geüpload of gesynchroniseerd. Verwijder je een kaart in de app, dan verdwijnt die meteen uit de lokale bestanden; ook bij het verwijderen van de app worden die bestanden gewist. Verwijderde gegevens kunnen in de app niet worden hersteld. Heb je eerder een iCloud- of computerback-up gemaakt, dan hangt het van die back-up en het moment waarop je hem hebt gemaakt af of herstel mogelijk is; herstellen verloopt via de systeemback-up.</p>
+
+  <h3>Waarom heeft de app toegang tot de microfoon en spraakherkenning nodig?</h3>
+  <p>Alleen voor spraakinvoer: nadat je op de spraakknop tikt, wordt wat je zegt omgezet in tekst voor de kaart. De toestemming wordt alleen gevraagd de eerste keer dat je spraakinvoer gebruikt. De app schakelt de microfoon nooit in bij het starten of op de achtergrond, en slaat een opname niet op als bestand. Als je weigert, blijven alle andere functies beschikbaar — je kunt gewoon blijven typen.</p>
+
+  <h3>Wordt mijn spraak geüpload? Wordt audio opgeslagen?</h3>
+  <p>Nee. Spraakinvoer gebruikt uitsluitend spraakherkenning op het apparaat zelf, dus audio verlaat je apparaat nooit en wordt nooit naar de servers van Apple of naar ons geüpload. De app maakt of bewaart geen audiobestanden; alleen de herkende tekst wordt naar de lokale <code>cards.json</code> geschreven.</p>
+
+  <h3>Wat als dicteren in het systeem uit staat of herkenning op het apparaat niet beschikbaar is?</h3>
+  <p>Dan wordt spraakinvoer uitgeschakeld en meldt de app: ‘Spraakherkenning op het apparaat is momenteel niet beschikbaar. Controleer de dicteerinstellingen van je systeem of gebruik het toetsenbord.’ Ga naar Instellingen &gt; Algemeen &gt; Toetsenbord, controleer of Dicteren aan staat en of de dicteerbestanden voor jouw taal zijn gedownload, of typ gewoon zelf. De app schakelt nooit over op een herkenningmethode waarvoor een netwerkverbinding nodig is.</p>
+
+  <h3>Heeft de app een netwerkverbinding of een account nodig?</h3>
+  <p>Geen van beide. De app werkt volledig offline, doet geen netwerkverzoeken en gebruikt geen server. Er is geen account, geen aanmelding en geen abonnement.</p>
+
+  <h3>Welke talen worden ondersteund, en hoe wissel ik van taal?</h3>
+  <p>De interface is beschikbaar in 15 talen: Vereenvoudigd Chinees, Traditioneel Chinees, Engels, Japans, Koreaans, Duits, Frans, Nederlands, Zweeds, Noors, Deens, Italiaans, Spaans, Portugees en Arabisch. Standaard volgt de interface de systeemtaal van iOS (Instellingen &gt; Algemeen &gt; Taal en regio). Je kunt de taal ook in de app kiezen; de interfaceteksten, datumnotaties en het privacybeleid volgen dan die keuze. Is de systeemtaal niet ondersteund en is er geen taal gekozen, dan verschijnt de interface in het Vereenvoudigd Chinees.</p>
+
+  <h3>Welke iOS-versie is minimaal vereist?</h3>
+  <p>iOS 17.0 of nieuwer.</p>
+
+</section>
+
+<section>
+  <h2>Contact opnemen</h2>
+  <ul class="contact-list">
+    <li><span class="label">E-mail voor ondersteuning:</span> <a class="ltr" href="mailto:yufei.cjn@outlook.com">yufei.cjn@outlook.com</a></li>
+    <li><a href="../privacy-policy/nl.html">Privacybeleid van Floatage</a></li>
+  </ul>
+</section>
+
+<footer>
+  Floatage · Laatst bijgewerkt: 2026-11-13
+</footer>
+</main>
+</body>
+</html>

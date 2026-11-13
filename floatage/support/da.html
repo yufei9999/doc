@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0">
+<title>Floatage – Support</title>
+<meta name="description" content="Support til Floatage: kontakt, privatlivspolitik og ofte stillede spørgsmål.">
+<style>
+  :root {
+    --accent: #00704A;
+    --accent-dark: #00553A;
+    --bg: #F6F5F1;
+    --card: #FFFFFF;
+    --text: #24262B;
+    --muted: #8C8F96;
+    --border: #ECEBE6;
+    --code-bg: #EFEEE9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    padding: 2rem 1rem 4rem;
+    text-align: start;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 1.6rem; }
+  h1 { font-size: 1.9rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.3; }
+  header .meta { color: var(--muted); margin-top: 0.5rem; font-size: 0.95rem; }
+  .lang-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.45rem; margin-top: 1rem; }
+  .lang-nav a {
+    display: inline-block; padding: 0.3rem 0.75rem; border-radius: 999px;
+    border: 1px solid var(--border); background: var(--card);
+    color: var(--accent-dark); font-size: 0.82rem; font-weight: 600; text-decoration: none;
+  }
+  .lang-nav a[aria-current="page"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  section {
+    background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+    padding: 1.5rem 1.75rem; margin-bottom: 1.1rem; text-align: start;
+  }
+  h2 { font-size: 1.12rem; font-weight: 700; color: var(--accent-dark); margin-bottom: 0.7rem; line-height: 1.45; }
+  h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin: 1.15rem 0 0.35rem; line-height: 1.45; }
+  h3:first-of-type { margin-top: 0.4rem; }
+  p { margin: 0.55rem 0; }
+  p:first-of-type { margin-top: 0; }
+  ul { padding-inline-start: 1.25rem; margin: 0.55rem 0; }
+  li { margin-bottom: 0.35rem; }
+  li:last-child { margin-bottom: 0; }
+  a { color: var(--accent-dark); }
+  code {
+    background: var(--code-bg); border-radius: 5px; padding: 0.1em 0.35em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.88em; word-break: break-all;
+  }
+  .ltr { direction: ltr; unicode-bidi: embed; }
+  .contact-list { list-style: none; padding: 0; }
+  .contact-list li { margin-bottom: 0.5rem; }
+  .label { font-weight: 600; }
+  .lead { margin: 0 0 1.5rem; font-size: 0.98rem; }
+  footer { text-align: center; color: var(--muted); font-size: 0.82rem; margin-top: 2rem; line-height: 1.7; }
+  @media (max-width: 480px) {
+    body { padding: 1.5rem 0.85rem 3rem; }
+    section { padding: 1.2rem 1.1rem; border-radius: 14px; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.05rem; }
+    .lang-nav { gap: 0.35rem; }
+    .lang-nav a { padding: 0.26rem 0.6rem; font-size: 0.78rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Floatage – Support</h1>
+  <p class="meta">Hjælp, FAQ og kontakt</p>
+    <nav class="lang-nav">
+    <a href="zh-Hans.html">简体中文</a>
+    <a href="zh-Hant.html">繁體中文</a>
+    <a href="en.html">English</a>
+    <a href="ja.html">日本語</a>
+    <a href="ko.html">한국어</a>
+    <a href="de.html">Deutsch</a>
+    <a href="fr.html">Français</a>
+    <a href="nl.html">Nederlands</a>
+    <a href="sv.html">Svenska</a>
+    <a href="nb.html">Norsk</a>
+    <a href="da.html" aria-current="page">Dansk</a>
+    <a href="it.html">Italiano</a>
+    <a href="es.html">Español</a>
+    <a href="pt.html">Português</a>
+    <a href="ar.html">العربية</a>
+  </nav>
+</header>
+
+<p class="lead">Floatage er en let app til idékort, som udelukkende arbejder lokalt på din enhed. Skriv en tanke ned, så snart den dukker op, føj gerne en opfølgning til senere, og hvert kort vokser til sin egen tidslinje. Alt bliver på din enhed: Der er ingen konto, ingen server bag appen, og den fungerer helt offline.</p>
+
+<section>
+  <h2>Ofte stillede spørgsmål</h2>
+  <h3>Hvor gemmes mine data, og kan slettede data gendannes?</h3>
+  <p>Kort gemmes udelukkende i <code>cards.json</code> og den tilhørende <code>.bak</code>-sikkerhedskopi i appens sandkasse. Der uploades eller synkroniseres intet. Når du sletter et kort i appen, fjernes det med det samme fra de lokale filer, og hvis du afinstallerer appen, slettes disse filer også. Slettede data kan ikke gendannes i appen; hvis du tidligere har lavet en iCloud- eller computersikkerhedskopi, afhænger en eventuel gendannelse af netop den sikkerhedskopi og af, hvornår den blev lavet, og gendannelsen skal ske via systemets sikkerhedskopi.</p>
+
+  <h3>Hvorfor har appen brug for adgang til mikrofon og talegenkendelse?</h3>
+  <p>Kun til taleinput: Når du trykker på taleknappen, bliver det, du siger, omdannet til korttekst. Tilladelsen bliver først bedt om, når du bruger taleinput første gang. Appen tænder aldrig mikrofonen ved opstart eller i baggrunden og gemmer ikke en optagelse som fil. Afviser du tilladelsen, påvirker det ikke andre funktioner – du kan stadig skrive.</p>
+
+  <h3>Bliver min tale uploadet? Gemmes lyden?</h3>
+  <p>Nej. Taleinput bruger udelukkende talegenkendelse på enheden, så lyden forlader aldrig din enhed og bliver hverken sendt til Apples servere eller til os. Appen opretter eller gemmer ingen lydfiler; kun den genkendte tekst skrives til den lokale <code>cards.json</code>.</p>
+
+  <h3>Hvad hvis systemdiktering er slået fra, eller genkendelse på enheden ikke er tilgængelig?</h3>
+  <p>Så slås taleinput fra, og appen viser: „Talegenkendelse på enheden er ikke tilgængelig i øjeblikket. Kontroller indstillingerne for systemdiktering, eller brug tastaturet.“ Du kan gå til iOS-indstillinger &gt; Generelt &gt; Tastatur og sikre dig, at Diktering er slået til, og at dikteringsressourcerne til dit sprog er hentet – eller du kan blot skrive i stedet. Appen skifter aldrig til en genkendelsesmetode, der kræver netværksforbindelse.</p>
+
+  <h3>Har appen brug for en netværksforbindelse eller en konto?</h3>
+  <p>Hverken det ene eller det andet. Appen kører helt offline, sender ingen netværksanmodninger og bruger ingen server. Der er ingen konto, ingen login og intet abonnement.</p>
+
+  <h3>Hvilke sprog understøttes, og hvordan skifter jeg sprog?</h3>
+  <p>Grænsefladen findes på 15 sprog: forenklet kinesisk, traditionelt kinesisk, engelsk, japansk, koreansk, tysk, fransk, nederlandsk, svensk, norsk, dansk, italiensk, spansk, portugisisk og arabisk. Som standard følger den iOS-systemsproget (Indstillinger &gt; Generelt &gt; Sprog og område). Du kan også vælge et sprog i appen; grænsefladeteksten, datoformaterne og privatlivspolitikken følger derefter dette valg. Hvis systemsproget ikke understøttes, og der ikke er valgt noget sprog, vises grænsefladen på forenklet kinesisk.</p>
+
+  <h3>Hvilken iOS-version kræves som minimum?</h3>
+  <p>iOS 17.0 eller nyere.</p>
+
+</section>
+
+<section>
+  <h2>Kontakt os</h2>
+  <ul class="contact-list">
+    <li><span class="label">E-mail til support:</span> <a class="ltr" href="mailto:yufei.cjn@outlook.com">yufei.cjn@outlook.com</a></li>
+    <li><a href="../privacy-policy/da.html">Floatages privatlivspolitik</a></li>
+  </ul>
+</section>
+
+<footer>
+  Floatage · Sidst opdateret: 2026-11-13
+</footer>
+</main>
+</body>
+</html>

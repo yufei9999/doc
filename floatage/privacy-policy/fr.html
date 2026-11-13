@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité de Floatage</title>
+<meta name="description" content="Politique de confidentialité de Floatage">
+<style>
+  :root {
+    --accent: #00704A;
+    --accent-dark: #00553A;
+    --bg: #F6F5F1;
+    --card: #FFFFFF;
+    --text: #24262B;
+    --muted: #8C8F96;
+    --border: #ECEBE6;
+    --code-bg: #EFEEE9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    padding: 2rem 1rem 4rem;
+    text-align: start;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 2.25rem; }
+  h1 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+  }
+  header .meta {
+    color: var(--muted);
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .lead {
+    margin: 0 0 1.5rem;
+    font-size: 0.98rem;
+    color: var(--text);
+  }
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.1rem;
+    text-align: start;
+  }
+  h2 {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+    margin-bottom: 0.7rem;
+    line-height: 1.45;
+  }
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 1.1rem 0 0.5rem;
+    line-height: 1.4;
+  }
+  p { margin: 0.55rem 0; }
+  p:first-of-type { margin-top: 0; }
+  ul { padding-inline-start: 1.25rem; margin: 0.55rem 0; }
+  li { margin-bottom: 0.35rem; }
+  li:last-child { margin-bottom: 0; }
+  strong { font-weight: 700; }
+  code {
+    background: var(--code-bg);
+    border-radius: 5px;
+    padding: 0.1em 0.35em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.88em;
+    direction: ltr;
+    unicode-bidi: embed;
+    word-break: break-all;
+  }
+  .ltr { direction: ltr; unicode-bidi: embed; }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin-top: 2rem;
+    line-height: 1.7;
+  }
+  @media (max-width: 480px) {
+    body { padding: 1.5rem 0.85rem 3rem; }
+    section { padding: 1.2rem 1.1rem; border-radius: 14px; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.05rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Politique de confidentialité de Floatage</h1>
+  <p class="meta">Date d'entrée en vigueur : 6 novembre 2026<br>Dernière mise à jour : 6 novembre 2026</p>
+</header>
+<p class="lead">Floatage (« l'Application ») est une application de prise de notes locale. Vous notez un élément dès qu'il vous vient à l'esprit, puis vous y ajoutez des notes complémentaires plus tard, de sorte que chaque élément se transforme en une chronologie qui lui est propre. Cette politique décrit ce que l'Application fait réellement des informations et comment celles-ci sont conservées. Veuillez la lire avant de commencer à utiliser l'Application.</p>
+<section>
+  <h2>1. Ce que l'Application stocke</h2>
+  <p>Tout ce que vous saisissez ou dictez dans l'Application est enregistré sur votre appareil, notamment :</p>
+<ul><li>le titre et le corps de chaque carte (le corps sert aussi à générer le résumé de la liste) ;</li><li>les notes complémentaires que vous ajoutez à une carte, ainsi que leurs horodatages ;</li><li>l'indicateur de statut de chaque carte et son épinglage éventuel ;</li><li>les dates de création et de modification des cartes et des notes complémentaires.</li></ul>
+<p>L'Application conserve également une copie de sauvegarde locale des données précédentes, utilisée pour la récupération si le fichier de données principal est corrompu (voir la section 2).</p>
+<p>L'Application ne collecte pas le modèle de votre appareil, la version du système, les identifiants d'appareil (IDFV ou IDFA), la localisation, les contacts, les photos, la caméra, les données de santé ni les informations de paiement, et elle n'enregistre pas votre comportement d'utilisation ni vos parcours de navigation. La saisie vocale ne produit aucun fichier audio et ne conserve aucun enregistrement : seul le texte reconnu est enregistré, au sein de la carte.</p>
+</section>
+<section>
+  <h2>2. Où sont stockées vos informations</h2>
+  <p>Les cartes sont conservées dans un fichier JSON à l'intérieur de l'espace de stockage isolé de l'Application (Application Support/Floatage), accompagné d'une copie de sauvegarde <code>.bak</code>. Lors de l'enregistrement, l'Application écrit un fichier temporaire, puis remplace le fichier principal de manière atomique afin de réduire le risque de corruption si une écriture est interrompue ; si le fichier principal ne peut pas être lu, l'Application tente de le restaurer à partir de la sauvegarde.</p>
+<p>L'Application n'a pas de serveur. Elle ne téléverse, ne transmet et ne synchronise ce contenu vers aucun service cloud ni vers aucun tiers. Nous ne pouvons ni consulter, ni lire, ni restaurer vos cartes.</p>
+</section>
+<section>
+  <h2>3. Accès au réseau, export et partage</h2>
+  <p>L'Application n'effectue aucune requête réseau et n'utilise aucun serveur. Elle ne contient aucun code de mise en réseau et l'application compilée n'est liée à aucun framework réseau d'Apple : vos cartes ne sont donc jamais téléversées, transmises ni synchronisées où que ce soit.</p>
+<p>Toutes les fonctionnalités fonctionnent sans connexion réseau, y compris la saisie vocale : la parole est reconnue sur votre appareil et le texte reconnu est écrit uniquement dans le fichier de données local. La saisie vocale nécessite que le système dispose des ressources de dictée pour votre langue et que la dictée système soit activée ; si l'un ou l'autre manque, la saisie vocale est désactivée et l'Application affiche un message indiquant que la reconnaissance vocale sur l'appareil est actuellement indisponible et suggérant de vérifier les réglages de dictée du système ou d'utiliser le clavier. Vous pouvez alors continuer à taper, et l'Application ne bascule jamais vers une méthode de reconnaissance nécessitant une connexion réseau.</p>
+<p>La version actuelle ne propose aucune fonction d'export ni de partage et ne transmet pas de contenu à d'autres applications via la feuille de partage d'iOS. Si une version future en ajoute une, nous l'expliquerons avant utilisation et mettrons à jour cette politique.</p>
+<p>La présence des fichiers de cartes de l'espace de stockage isolé de l'Application dans une sauvegarde d'appareil iOS (iCloud ou ordinateur) dépend de vos réglages de sauvegarde système. Cette sauvegarde est effectuée par une fonctionnalité système d'Apple et est indépendante de l'Application.</p>
+</section>
+<section>
+  <h2>4. Autorisations système et accès à l'appareil</h2>
+  <p>La saisie vocale est la seule fonctionnalité nécessitant une autorisation. La première fois que vous touchez le bouton de saisie vocale, iOS demande si l'Application peut utiliser le microphone ; selon l'API système utilisée par l'Application, iOS peut également afficher à ce moment une demande d'autorisation pour la reconnaissance vocale. L'Application ne demande pas l'accès aux notifications, à la photothèque, à la caméra, à la localisation, aux contacts ni aux données de santé, et n'y accède pas.</p>
+<h3>Microphone et saisie vocale</h3>
+<ul><li>À quoi cela sert : l'Application convertit ce que vous dites en texte pour une carte, que vous pouvez modifier avant d'enregistrer. Le texte reconnu est écrit uniquement dans le fichier de données local de l'Application (cards.json) ; rien d'autre n'est créé.</li><li>Quand elle est demandée : uniquement la première fois que vous utilisez la saisie vocale. L'Application n'ouvre pas le microphone au lancement ni en arrière-plan, et l'enregistrement s'arrête dès que vous avez fini de dicter, que vous quittez l'éditeur ou que vous fermez l'Application.</li><li>L'audio n'est ni stocké ni envoyé : l'Application ne crée aucun fichier audio et ne conserve aucun enregistrement. La saisie vocale utilise la reconnaissance vocale sur l'appareil du système ; l'audio est donc traité uniquement sur votre appareil — il n'est pas téléversé vers les serveurs d'Apple ni vers nous, et le texte reconnu reste dans le fichier de données local sur votre appareil. Cela nécessite la présence des ressources de dictée pour votre langue et l'activation de la dictée système ; dans le cas contraire, la saisie vocale est désactivée et l'Application affiche un message indiquant que la reconnaissance vocale sur l'appareil est actuellement indisponible et suggérant de vérifier les réglages de dictée du système ou d'utiliser le clavier. Elle ne bascule jamais vers une méthode de reconnaissance nécessitant une connexion réseau.</li><li>Si vous refusez : toutes les autres fonctionnalités restent disponibles et vous pouvez continuer à ajouter et modifier des cartes en tapant au clavier. Vous pouvez autoriser l'accès plus tard dans les Réglages iOS, ou le révoquer à tout moment ; la saisie vocale cessera alors de fonctionner.</li></ul>
+<p>Si une version future introduit une fonctionnalité nécessitant une autre autorisation, nous afficherons la demande iOS standard avant la première utilisation de cette fonctionnalité, nous en expliquerons l'objet et nous mettrons à jour cette politique sur cette page. Vous pouvez révoquer toute autorisation à tout moment dans les Réglages iOS ; la fonctionnalité concernée pourra alors être indisponible.</p>
+</section>
+<section>
+  <h2>5. Conservation et suppression</h2>
+  <ul><li>Les cartes restent sur votre appareil jusqu'à ce que vous les supprimiez.</li><li>Vous pouvez supprimer une carte entière dans l'Application, ou supprimer une note complémentaire individuelle au sein d'une carte.</li><li>Supprimer l'Application de votre iPhone supprime également le fichier de données principal et le fichier de sauvegarde dans l'espace de stockage isolé de l'Application.</li><li>La suppression est irréversible. Comme les données n'existent que sur votre appareil et que l'Application ne propose pas de fonction d'export, nous ne pouvons pas les restaurer pour vous ; veuillez supprimer avec prudence.</li></ul>
+</section>
+<section>
+  <h2>6. SDK tiers, analyse et publicité</h2>
+  <p>L'Application n'inclut aucun SDK tiers, quel qu'il soit : ni SDK d'analyse, de publicité, d'attribution ou de rapport de plantage. Elle ne contient aucune publicité, ne vous suit pas à travers les applications ni les sites web, n'utilise pas l'IDFA et ne demande pas l'autorisation App Tracking Transparency. L'envoi à Apple des diagnostics système et des journaux de plantage dépend de votre choix dans Réglages iOS &gt; Confidentialité et sécurité &gt; Analyse et améliorations ; cela est indépendant de l'Application.</p>
+</section>
+<section>
+  <h2>7. Confidentialité des enfants</h2>
+  <p>L'Application n'est pas conçue pour les enfants et ne collecte de renseignements personnels auprès de personne. Comme toutes les cartes restent dans le stockage local de l'appareil, nous n'obtenons, ne conservons et ne partageons jamais ce qu'un enfant écrit. Si vous êtes parent ou tuteur et estimez qu'il existe un problème, veuillez nous contacter aux coordonnées ci-dessous.</p>
+</section>
+<section>
+  <h2>8. Modifications de cette politique</h2>
+  <p>Lorsque cette politique change, nous mettrons à jour la date de « Dernière mise à jour » en haut de cette page. Si une modification a une incidence sur la manière dont vos informations sont traitées, nous vous en informerons dans l'Application ou dans les notes de version de l'App Store. Le fait de continuer à utiliser l'Application après l'entrée en vigueur d'une modification vaut acceptation de la politique mise à jour.</p>
+</section>
+<section>
+  <h2>9. Nous contacter</h2>
+  <p>Si vous avez des questions sur cette politique ou souhaitez exercer un droit relatif à vos données, veuillez nous contacter :</p>
+<ul><li>E-mail de contact : <span class="ltr">yufei.cjn@outlook.com</span></li></ul>
+</section>
+<footer>
+  Floatage
+</footer>
+</main>
+</body>
+</html>
